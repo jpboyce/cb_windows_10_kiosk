@@ -1,11 +1,9 @@
 # Default attributes
 
-
 # SecEdit values
 default['secedit']['template']['location'] = 'C:\Windows\security\templates'
 default['secedit']['database']['location'] = 'C:\Windows\security\database'
 default['secedit']['database']['name'] = 'kioskpolicy.sdb'
-
 
 # System Access defaults - these are items under the [System Access] heading in a secedit cfg file
 default['cfg_file']['system_access']['MinimumPasswordAge'] = nil
@@ -23,7 +21,6 @@ default['cfg_file']['system_access']['LSAAnonymousNameLookup'] = nil
 default['cfg_file']['system_access']['EnableAdminAccount'] = nil
 default['cfg_file']['system_access']['EnableGuestAccount'] = nil
 
-
 # Event Audit defaults - these are items under the [Event Audit] heading in a secedit cfg file
 default['cfg_file']['event_audit']['AuditSystemEvents'] = nil
 default['cfg_file']['event_audit']['AuditLogonEvents'] = nil
@@ -33,7 +30,6 @@ default['cfg_file']['event_audit']['AuditPolicyChange'] = nil
 default['cfg_file']['event_audit']['AuditAccountManage'] = nil
 default['cfg_file']['event_audit']['AuditProcessTracking'] = nil
 default['cfg_file']['event_audit']['AuditDSAccess'] = nil
-
 
 # Privilege Rights defaults - these are items under the [Privilege Rights] in a secedit cfg file
 default['cfg_file']['privilege_rights']['SeNetworkLogonRight'] = nil
