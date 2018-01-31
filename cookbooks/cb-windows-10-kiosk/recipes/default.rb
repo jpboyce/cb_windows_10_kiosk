@@ -3,3 +3,8 @@
 # Recipe:: default
 #
 # Copyright:: 2018, The Authors, All Rights Reserved.
+
+
+
+# Include CIS Recipes
+include_recipe 'cb-windows-10-kiosk::cis-1'
