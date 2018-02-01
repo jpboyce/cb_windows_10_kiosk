@@ -67,6 +67,13 @@ default['cfg_file']['privilege_rights']['SeTimeZonePrivilege'] = nil
 default['cfg_file']['privilege_rights']['SeCreateSymbolicLinkPrivilege'] = nil
 default['cfg_file']['privilege_rights']['SeDelegateSessionUserImpersonatePrivilege'] = nil
 
+# Kiosk account details
+# In reality, you would secure this better but for the purposes of this cookbook, we'll have the Kiosk default account details here
+default['account']['kiosk']['username'] = 'kiosk'
+default['account']['kiosk']['password'] = 'P@ssw0rd!'
+
+
+
 
 
 
