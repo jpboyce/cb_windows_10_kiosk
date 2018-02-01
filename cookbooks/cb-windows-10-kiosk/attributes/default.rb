@@ -72,7 +72,11 @@ default['cfg_file']['privilege_rights']['SeDelegateSessionUserImpersonatePrivile
 default['account']['kiosk']['username'] = 'kiosk'
 default['account']['kiosk']['password'] = 'P@ssw0rd!'
 
-
+# Default Assigned Access
+# Defaulting the shell to explorer.exe for everyone just in case
+default['account']['administrators']['shell'] = 'explorer.exe'
+default['account']['users']['shell'] = 'explorer.exe'
+default['account']['kiosk']['shell'] = 'explorer.exe'
 
 
 
