@@ -71,6 +71,8 @@ default['cfg_file']['privilege_rights']['SeDelegateSessionUserImpersonatePrivile
 # In reality, you would secure this better but for the purposes of this cookbook, we'll have the Kiosk default account details here
 default['account']['kiosk']['username'] = 'kiosk'
 default['account']['kiosk']['password'] = 'P@ssw0rd!'
+default['account']['kiosk']['description'] = 'Kiosk Account'
+default['account']['kiosk']['groups'] = ['Users'] # Array to add the Kiosk account to, in most cases this needs to just be Users
 
 # Default Assigned Access
 # Defaulting the shell to explorer.exe for everyone just in case
