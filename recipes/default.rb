@@ -7,4 +7,7 @@
 
 
 # Include CIS Recipes
-include_recipe 'cb-windows-10-kiosk::cis-1'
+#include_recipe 'cb-windows-10-kiosk::cis-1'
+
+# Account Management
+include_recipe 'cb-windows-10-kiosk::local-accounts'
