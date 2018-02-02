@@ -20,7 +20,6 @@ property :service, String, required: false                  # Rule field: Servic
 action :create do
 # Powershell command is - New-NetFirewallRule
 
-
 end
 
 
