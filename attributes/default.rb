@@ -67,8 +67,68 @@ default['cfg_file']['privilege_rights']['SeTimeZonePrivilege'] = nil
 default['cfg_file']['privilege_rights']['SeCreateSymbolicLinkPrivilege'] = nil
 default['cfg_file']['privilege_rights']['SeDelegateSessionUserImpersonatePrivilege'] = nil
 
+# Kiosk account details
+# In reality, you would secure this better but for the purposes of this cookbook, we'll have the Kiosk default account details here
+default['account']['kiosk']['username'] = 'kiosk'
+default['account']['kiosk']['password'] = 'P@ssw0rd!'
+default['account']['kiosk']['description'] = 'Kiosk Account'
+default['account']['kiosk']['groups'] = ['Users'] # Array to add the Kiosk account to, in most cases this needs to just be Users
 
+# Default Assigned Access
+# Defaulting the shell to explorer.exe for everyone just in case
+default['account']['administrators']['shell'] = 'explorer.exe'
+default['account']['users']['shell'] = 'explorer.exe'
+default['account']['kiosk']['shell'] = 'explorer.exe'
 
+# Default firewall rules
+# Allow ping in
+default['firewallrule']['ping']['name'] = 'Allow ICMP Inbound'
+default['firewallrule']['ping']['ruleaction'] = 'Allow'
+default['firewallrule']['ping']['description'] = 'Allow ICMP Inbound'
+default['firewallrule']['ping']['direction'] = 'Inbound'
+default['firewallrule']['ping']['enabled'] = 'True'
+default['firewallrule']['ping']['group'] = 'Default rule by Chef'
+default['firewallrule']['ping']['interfacetype'] = 'Any'
+default['firewallrule']['ping']['localaddress'] = ''
+default['firewallrule']['ping']['localport'] = 'Any'
+default['firewallrule']['ping']['profile'] = 'Any'
+default['firewallrule']['ping']['program'] = 'System'
+default['firewallrule']['ping']['protocol'] = 'ICMPv4'
+default['firewallrule']['ping']['remoteaddress'] = 'Any'
+default['firewallrule']['ping']['remoteport'] = 'Any'
+default['firewallrule']['ping']['service'] = ''
 
+# Allow RDP (TCP) in
+default['firewallrule']['rdp']['name'] = 'Allow RDP (TCP) Inbound'
+default['firewallrule']['rdp']['ruleaction'] = 'Allow'
+default['firewallrule']['rdp']['description'] = 'Allow RDP (TCP) Inbound'
+default['firewallrule']['rdp']['direction'] = 'Inbound'
+default['firewallrule']['rdp']['enabled'] = 'True'
+default['firewallrule']['rdp']['group'] = 'Default rule by Chef'
+default['firewallrule']['rdp']['interfacetype'] = 'Any'
+default['firewallrule']['rdp']['localaddress'] = ''
+default['firewallrule']['rdp']['localport'] = '3389'
+default['firewallrule']['rdp']['profile'] = 'Any'
+default['firewallrule']['rdp']['program'] = '%SystemRoot%\system32\svchost.exe'
+default['firewallrule']['rdp']['protocol'] = 'TCP'
+default['firewallrule']['rdp']['remoteaddress'] = 'Any'
+default['firewallrule']['rdp']['remoteport'] = 'Any'
+default['firewallrule']['rdp']['service'] = 'termservice'
 
+# Allow RDP (UDP) in
+default['firewallrule']['rdp']['name'] = 'Allow RDP (UDP) Inbound'
+default['firewallrule']['rdp']['ruleaction'] = 'Allow'
+default['firewallrule']['rdp']['description'] = 'Allow RDP (UDP) Inbound'
+default['firewallrule']['rdp']['direction'] = 'Inbound'
+default['firewallrule']['rdp']['enabled'] = 'True'
+default['firewallrule']['rdp']['group'] = 'Default rule by Chef'
+default['firewallrule']['rdp']['interfacetype'] = 'Any'
+default['firewallrule']['rdp']['localaddress'] = ''
+default['firewallrule']['rdp']['localport'] = '3389'
+default['firewallrule']['rdp']['profile'] = 'Any'
+default['firewallrule']['rdp']['program'] = '%SystemRoot%\system32\svchost.exe'
+default['firewallrule']['rdp']['protocol'] = 'UDP'
+default['firewallrule']['rdp']['remoteaddress'] = 'Any'
+default['firewallrule']['rdp']['remoteport'] = 'Any'
+default['firewallrule']['rdp']['service'] = 'termservice'
 
