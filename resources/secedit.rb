@@ -5,7 +5,6 @@ property :template, String, required: false, default: ''
 property :database, String, required: false, default: ''
 property :log, String, default: ''
 
-
 action :configure do
     if node['platform'] == 'windows'
         template "#{template}" do
@@ -23,6 +22,3 @@ action :configure do
         Chef::Log.info "#{@current_resource} is only for a Windows platform"
     end
 end
-
-
-

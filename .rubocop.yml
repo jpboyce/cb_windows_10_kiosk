@@ -16,6 +16,7 @@
 Layout/IndentationWidth:
   Enabled: false
 
+# Stop carriage return character errors
 Layout/EndOfLine:
   Enabled: false
   
