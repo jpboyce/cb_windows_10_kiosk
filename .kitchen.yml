@@ -13,8 +13,13 @@ verifier:
   name: inspec
 
 platforms:
-  - name: ubuntu-16.04
-  - name: centos-7
+  - name: windows-10-ltsb-x64
+    os_type: windows
+
+transport:
+username: vagrant
+password: vagrant
+
 
 suites:
   - name: default
