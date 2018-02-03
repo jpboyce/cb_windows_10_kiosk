@@ -12,7 +12,7 @@ end
 node['account']['kiosk']['groups'].each do |i|
     group i do
         action :modify
-        members node['account']['kiosk']['username']}
+        members node['account']['kiosk']['username']
         append true
     end
 end
