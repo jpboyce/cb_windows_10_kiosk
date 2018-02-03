@@ -131,4 +131,3 @@ default['firewallrule']['rdp']['protocol'] = 'UDP'
 default['firewallrule']['rdp']['remoteaddress'] = 'Any'
 default['firewallrule']['rdp']['remoteport'] = 'Any'
 default['firewallrule']['rdp']['service'] = 'termservice'
-
