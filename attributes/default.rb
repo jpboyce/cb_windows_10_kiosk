@@ -1,5 +1,10 @@
 # Default attributes
 
+# CIS Levels to apply
+# By default we would want CIS Level 1 but not level 2
+default['cis']['level']['1'] = 'yes'
+default['cis']['level']['2'] = 'no'
+
 # SecEdit values
 default['secedit']['template']['location'] = 'C:\Windows\security\templates'
 default['secedit']['database']['location'] = 'C:\Windows\security\database'
