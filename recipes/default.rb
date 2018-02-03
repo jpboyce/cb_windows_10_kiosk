@@ -4,8 +4,6 @@
 #
 # Copyright:: 2018, The Authors, All Rights Reserved.
 
-
-
 # Include CIS Recipes
 include_recipe 'cb-windows-10-kiosk::cis-1-1-password-policy'
 include_recipe 'cb-windows-10-kiosk::cis-1-2-account-lockout-policy'
