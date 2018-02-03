@@ -1,6 +1,6 @@
 # Windows Firewall resource
 
-resource_name :firewall-rule
+resource_name :firewallrule
 property :displayname, String, required: false              # Rule field: DisplayName
 property :ruleaction, String, required: false               # Rule field: Action (NotConfigured, Allow, Block)
 property :description, String, required: false              # Rule field: Description
