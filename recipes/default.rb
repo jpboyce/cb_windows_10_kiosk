@@ -5,6 +5,7 @@
 # Copyright:: 2018, The Authors, All Rights Reserved.
 
 # Include CIS Recipes
+=begin
 include_recipe 'cb-windows-10-kiosk::cis-1-1-password-policy'
 include_recipe 'cb-windows-10-kiosk::cis-1-2-account-lockout-policy'
 include_recipe 'cb-windows-10-kiosk::cis-17-1-audit-policy-account-logon'
@@ -27,10 +28,11 @@ include_recipe 'cb-windows-10-kiosk::cis-19-6-admin-templates-user-system'
 include_recipe 'cb-windows-10-kiosk::cis-19-7-admin-templates-user-windows-components'
 include_recipe 'cb-windows-10-kiosk::cis-2-2-user-rights-assignment'
 include_recipe 'cb-windows-10-kiosk::cis-2-3-security-options'
-include_recipe 'cb-windows-10-kiosk::cis-5-system-services'
-include_recipe 'cb-windows-10-kiosk::cis-9-1-windows-firewall-domain-profile'
-include_recipe 'cb-windows-10-kiosk::cis-9-2-windows-firewall-private-profile'
-include_recipe 'cb-windows-10-kiosk::cis-9-3-windows-firewall-public-profile'
+include_recipe 'cb-windows-10-kiosk::cis-5-system-services'                                         # Done
+=end
+#include_recipe 'cb-windows-10-kiosk::cis-9-1-windows-firewall-domain-profile'                      # Done
+#include_recipe 'cb-windows-10-kiosk::cis-9-2-windows-firewall-private-profile'                     # Done
+#include_recipe 'cb-windows-10-kiosk::cis-9-3-windows-firewall-public-profile'                      # Done
 
 # Account Management
-include_recipe 'cb-windows-10-kiosk::local-accounts'
+#include_recipe 'cb-windows-10-kiosk::local-accounts'                                               # Done
