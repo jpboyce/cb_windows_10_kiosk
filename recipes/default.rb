@@ -15,9 +15,11 @@ include_recipe 'cb-windows-10-kiosk::cis-17-3-audit-policy-logon-logoff'
 include_recipe 'cb-windows-10-kiosk::cis-17-6-audit-policy-object-access'
 include_recipe 'cb-windows-10-kiosk::cis-17-7-audit-policy-policy-change'
 include_recipe 'cb-windows-10-kiosk::cis-17-9-audit-policy-system'
+=end
 include_recipe 'cb-windows-10-kiosk::cis-18-1-admin-templates-computer-control-panel'
-include_recipe 'cb-windows-10-kiosk::cis-18-2-admin-templates-computer-laps'
+#include_recipe 'cb-windows-10-kiosk::cis-18-2-admin-templates-computer-laps'
 include_recipe 'cb-windows-10-kiosk::cis-18-3-admin-templates-computer-ms-security-guide'
+=begin
 include_recipe 'cb-windows-10-kiosk::cis-18-4-admin-templates-computer-mss-legacy'
 include_recipe 'cb-windows-10-kiosk::cis-18-5-admin-templates-computer-network'
 include_recipe 'cb-windows-10-kiosk::cis-18-8-admin-templates-computer-system'
