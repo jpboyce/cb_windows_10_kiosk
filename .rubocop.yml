@@ -19,4 +19,3 @@ Layout/IndentationWidth:
 # Stop carriage return character errors
 Layout/EndOfLine:
   Enabled: false
-  

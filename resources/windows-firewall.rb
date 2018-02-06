@@ -18,6 +18,6 @@ property :remoteport, String, required: false               # Rule field: Remote
 property :service, String, required: false                  # Rule field: Service (short name of a Windows service)
 
 action :create do
-    # Powershell command is - New-NetFirewallRule
+  # Powershell command is - New-NetFirewallRule
 
 end
