@@ -2,8 +2,9 @@
 
 # CIS Levels to apply
 # By default we would want CIS Level 1 but not level 2
-default['cis']['level']['1'] = 'yes'
-default['cis']['level']['2'] = 'no'
+default['cis']['level']['1'] = 'true'
+default['cis']['level']['2'] = 'false'
+default['cis']['level']['bitlocker'] = 'false'
 
 # SecEdit values
 default['secedit']['template']['location'] = 'C:\Windows\security\templates'
