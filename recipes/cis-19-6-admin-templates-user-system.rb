@@ -8,6 +8,6 @@ registry_key 'HKEY_USERS\.DEFAULT\SOFTWARE\Policies\Microsoft\Assistance\Client\
     data: 1,
   }]
   action :create
-  only_if { node['cis']['level']['2'] == "true" }
+  only_if { node['cis']['level']['2'] == 'true' }
   recursive true
 end

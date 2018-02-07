@@ -28,7 +28,7 @@ registry_key 'HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\System' do
     data: 1,
   }]
   action :create
-  only_if { node['cis']['level']['2'] == "true" }
+  only_if { node['cis']['level']['2'] == 'true' }
 end
 
 # Ensure 'Enable insecure guest logons' is set to 'Disabled'
@@ -49,7 +49,7 @@ registry_key 'HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\LLTD' do
     data: 1,
   }]
   action :create
-  only_if { node['cis']['level']['2'] == "true" }
+  only_if { node['cis']['level']['2'] == 'true' }
 end
 
 registry_key 'HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\LLTD' do
@@ -59,7 +59,7 @@ registry_key 'HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\LLTD' do
     data: 1,
   }]
   action :create
-  only_if { node['cis']['level']['2'] == "true" }
+  only_if { node['cis']['level']['2'] == 'true' }
 end
 
 registry_key 'HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\LLTD' do
@@ -69,7 +69,7 @@ registry_key 'HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\LLTD' do
     data: 1,
   }]
   action :create
-  only_if { node['cis']['level']['2'] == "true" }
+  only_if { node['cis']['level']['2'] == 'true' }
 end
 
 registry_key 'HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\LLTD' do
@@ -79,7 +79,7 @@ registry_key 'HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\LLTD' do
     data: 1,
   }]
   action :create
-  only_if { node['cis']['level']['2'] == "true" }
+  only_if { node['cis']['level']['2'] == 'true' }
 end
 
 # Ensure 'Turn on Responder (RSPNDR) driver' is set to 'Disabled'
@@ -90,7 +90,7 @@ registry_key 'HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\LLTD' do
     data: 1,
   }]
   action :create
-  only_if { node['cis']['level']['2'] == "true" }
+  only_if { node['cis']['level']['2'] == 'true' }
 end
 
 registry_key 'HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\LLTD' do
@@ -100,7 +100,7 @@ registry_key 'HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\LLTD' do
     data: 1,
   }]
   action :create
-  only_if { node['cis']['level']['2'] == "true" }
+  only_if { node['cis']['level']['2'] == 'true' }
 end
 
 registry_key 'HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\LLTD' do
@@ -110,7 +110,7 @@ registry_key 'HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\LLTD' do
     data: 1,
   }]
   action :create
-  only_if { node['cis']['level']['2'] == "true" }
+  only_if { node['cis']['level']['2'] == 'true' }
 end
 
 registry_key 'HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\LLTD' do
@@ -120,7 +120,7 @@ registry_key 'HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\LLTD' do
     data: 1,
   }]
   action :create
-  only_if { node['cis']['level']['2'] == "true" }
+  only_if { node['cis']['level']['2'] == 'true' }
 end
 
 # Ensure 'Turn off Microsoft Peer-to-Peer Networking Services' is set to 'Enabled'
@@ -131,7 +131,7 @@ registry_key 'HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Peernet' do
     data: 1,
   }]
   action :create
-  only_if { node['cis']['level']['2'] == "true" }
+  only_if { node['cis']['level']['2'] == 'true' }
 end
 
 # Ensure 'Prohibit installation and configuration of Network Bridge on your DNS domain network' is set to 'Enabled'
@@ -196,7 +196,7 @@ registry_key 'HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\TCPIP6\Parame
     data: 1,
   }]
   action :create
-  only_if { node['cis']['level']['2'] == "true" }
+  only_if { node['cis']['level']['2'] == 'true' }
 end
 # L2
 
@@ -208,7 +208,7 @@ registry_key 'HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\WCN\Registr
     data: 1,
   }]
   action :create
-  only_if { node['cis']['level']['2'] == "true" }
+  only_if { node['cis']['level']['2'] == 'true' }
 end
 
 registry_key 'HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\WCN\Registrars' do
@@ -218,7 +218,7 @@ registry_key 'HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\WCN\Registr
     data: 1,
   }]
   action :create
-  only_if { node['cis']['level']['2'] == "true" }
+  only_if { node['cis']['level']['2'] == 'true' }
 end
 
 registry_key 'HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\WCN\Registrars' do
@@ -228,7 +228,7 @@ registry_key 'HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\WCN\Registr
     data: 1,
   }]
   action :create
-  only_if { node['cis']['level']['2'] == "true" }
+  only_if { node['cis']['level']['2'] == 'true' }
 end
 
 registry_key 'HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\WCN\Registrars' do
@@ -238,7 +238,7 @@ registry_key 'HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\WCN\Registr
     data: 1,
   }]
   action :create
-  only_if { node['cis']['level']['2'] == "true" }
+  only_if { node['cis']['level']['2'] == 'true' }
 end
 
 registry_key 'HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\WCN\Registrars' do
@@ -248,7 +248,7 @@ registry_key 'HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\WCN\Registr
     data: 1,
   }]
   action :create
-  only_if { node['cis']['level']['2'] == "true" }
+  only_if { node['cis']['level']['2'] == 'true' }
 end
 
 # Ensure 'Prohibit access of the Windows Connect Now wizards' is set to 'Enabled'
@@ -259,7 +259,7 @@ registry_key 'HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\WCN\UI' do
     data: 1,
   }]
   action :create
-  only_if { node['cis']['level']['2'] == "true" }
+  only_if { node['cis']['level']['2'] == 'true' }
 end
 
 # Ensure 'Minimize the number of simultaneous connections to the Internet or a Windows Domain' is set to 'Enabled'

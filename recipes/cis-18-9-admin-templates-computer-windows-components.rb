@@ -9,7 +9,7 @@ registry_key 'HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\CurrentVers
      data: 1,
    }]
    action :create
-   only_if { node['cis']['level']['2'] == "true" }
+   only_if { node['cis']['level']['2'] == 'true' }
 end
 
 # Ensure 'Allow Microsoft accounts to be optional' is set to 'Enabled'
@@ -31,7 +31,7 @@ registry_key 'HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Polic
      data: 1,
    }]
    action :create
-   only_if { node['cis']['level']['2'] == "true" }
+   only_if { node['cis']['level']['2'] == 'true' }
 end
 
 # Ensure 'Disallow Autoplay for non-volume devices' is set to 'Enabled'
@@ -84,7 +84,7 @@ registry_key 'HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\FVE' do
      data: 1,
    }]
    action :create
-   only_if { node['cis']['level']['bitlocker']  == "true" }
+   only_if { node['cis']['level']['bitlocker']  == 'true' }
 end
 
 # Ensure 'Choose how BitLocker-protected fixed drives can be recovered' is set to 'Enabled'
@@ -96,7 +96,7 @@ registry_key 'HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\FVE' do
      data: 1,
    }]
    action :create
-   only_if { node['cis']['level']['bitlocker']  == "true" }
+   only_if { node['cis']['level']['bitlocker']  == 'true' }
 end
 
 # Ensure 'Choose how BitLocker-protected fixed drives can be recovered: Allow data recovery agent' is set to 'Enabled: True'
@@ -108,7 +108,7 @@ registry_key 'HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\FVE' do
      data: 1,
    }]
    action :create
-   only_if { node['cis']['level']['bitlocker']  == "true" }
+   only_if { node['cis']['level']['bitlocker']  == 'true' }
 end
 
 # Ensure 'Choose how BitLocker-protected fixed drives can be recovered: Recovery Password' is set to 'Enabled: Allow 48-digit recovery password'
@@ -120,7 +120,7 @@ registry_key 'HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\FVE' do
      data: 1,
    }]
    action :create
-   only_if { node['cis']['level']['bitlocker']  == "true" }
+   only_if { node['cis']['level']['bitlocker']  == 'true' }
 end
 
 # Ensure 'Choose how BitLocker-protected fixed drives can be recovered: Recovery Key' is set to 'Enabled: Allow 256-bit recovery key'
@@ -132,7 +132,7 @@ registry_key 'HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\FVE' do
      data: 1,
    }]
    action :create
-   only_if { node['cis']['level']['bitlocker']  == "true" }
+   only_if { node['cis']['level']['bitlocker']  == 'true' }
 end
 
 # Ensure 'Choose how BitLocker-protected fixed drives can be recovered: Omit recovery options from the BitLocker setup wizard' is set to 'Enabled: True'
@@ -144,7 +144,7 @@ registry_key 'HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\FVE' do
      data: 1,
    }]
    action :create
-   only_if { node['cis']['level']['bitlocker']  == "true" }
+   only_if { node['cis']['level']['bitlocker']  == 'true' }
 end
 
 # Ensure 'Choose how BitLocker-protected fixed drives can be recovered: Save BitLocker recovery information to AD DS for fixed data drives' is set to 'Enabled: False'
@@ -156,7 +156,7 @@ registry_key 'HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\FVE' do
      data: 1,
    }]
    action :create
-   only_if { node['cis']['level']['bitlocker']  == "true" }
+   only_if { node['cis']['level']['bitlocker']  == 'true' }
 end
 
 # Ensure 'Choose how BitLocker-protected fixed drives can be recovered: Configure storage of BitLocker recovery information to AD DS' is set to 'Enabled: Backup recovery passwords and key packages'
@@ -168,7 +168,7 @@ registry_key 'HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\FVE' do
      data: 1,
    }]
    action :create
-   only_if { node['cis']['level']['bitlocker']  == "true" }
+   only_if { node['cis']['level']['bitlocker']  == 'true' }
 end
 
 # Ensure 'Choose how BitLocker-protected fixed drives can be recovered: Do not enable BitLocker until recovery information is stored to AD DS for fixed data drives' is set to 'Enabled: False'
@@ -180,7 +180,7 @@ registry_key 'HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\FVE' do
      data: 1,
    }]
    action :create
-   only_if { node['cis']['level']['bitlocker']  == "true" }
+   only_if { node['cis']['level']['bitlocker']  == 'true' }
 end
 
 # Ensure 'Configure use of hardware-based encryption for fixed data drives' is set to 'Enabled'
@@ -192,7 +192,7 @@ registry_key 'HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\FVE' do
      data: 1,
    }]
    action :create
-   only_if { node['cis']['level']['bitlocker']  == "true" }
+   only_if { node['cis']['level']['bitlocker']  == 'true' }
 end
 
 # Ensure 'Configure use of hardware-based encryption for fixed data drives: Use BitLocker software-based encryption when hardware encryption is not available' is set to 'Enabled: True'
@@ -204,7 +204,7 @@ registry_key 'HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\FVE' do
      data: 1,
    }]
    action :create
-   only_if { node['cis']['level']['bitlocker']  == "true" }
+   only_if { node['cis']['level']['bitlocker']  == 'true' }
 end
 
 # Ensure 'Configure use of hardware-based encryption for fixed data drives: Restrict encryption algorithms and cipher suites allowed for hardware-based encryption' is set to 'Enabled: False'
@@ -216,7 +216,7 @@ registry_key 'HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\FVE' do
      data: 1,
    }]
    action :create
-   only_if { node['cis']['level']['bitlocker']  == "true" }
+   only_if { node['cis']['level']['bitlocker']  == 'true' }
 end
 
 # Ensure 'Configure use of hardware-based encryption for fixed data drives: Restrict crypto algorithms or cipher suites to the following:' is set to 'Enabled: 2.16.840.1.101.3.4.1.2;2.16.840.1.101.3.4.1.42'
@@ -228,7 +228,7 @@ registry_key 'HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\FVE' do
      data: 1,
    }]
    action :create
-   only_if { node['cis']['level']['bitlocker']  == "true" }
+   only_if { node['cis']['level']['bitlocker']  == 'true' }
 end
 
 # Ensure 'Configure use of passwords for fixed data drives' is set to 'Disabled'
@@ -240,7 +240,7 @@ registry_key 'HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\FVE' do
      data: 1,
    }]
    action :create
-   only_if { node['cis']['level']['bitlocker']  == "true" }
+   only_if { node['cis']['level']['bitlocker']  == 'true' }
 end
 
 # Ensure 'Configure use of smart cards on fixed data drives' is set to 'Enabled'
@@ -252,7 +252,7 @@ registry_key 'HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\FVE' do
      data: 1,
    }]
    action :create
-   only_if { node['cis']['level']['bitlocker']  == "true" }
+   only_if { node['cis']['level']['bitlocker']  == 'true' }
 end
 
 # Ensure 'Configure use of smart cards on fixed data drives: Require use of smart cards on fixed data drives' is set to 'Enabled: True'
@@ -264,7 +264,7 @@ registry_key 'HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\FVE' do
      data: 1,
    }]
    action :create
-   only_if { node['cis']['level']['bitlocker']  == "true" }
+   only_if { node['cis']['level']['bitlocker']  == 'true' }
 end
 
 # Ensure 'Allow enhanced PINs for startup' is set to 'Enabled'
@@ -276,7 +276,7 @@ registry_key 'HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\FVE' do
      data: 1,
    }]
    action :create
-   only_if { node['cis']['level']['bitlocker']  == "true" }
+   only_if { node['cis']['level']['bitlocker']  == 'true' }
 end
 
 # Ensure 'Allow Secure Boot for integrity validation' is set to 'Enabled'
@@ -288,7 +288,7 @@ registry_key 'HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\FVE' do
      data: 1,
    }]
    action :create
-   only_if { node['cis']['level']['bitlocker']  == "true" }
+   only_if { node['cis']['level']['bitlocker']  == 'true' }
 end
 
 # Ensure 'Choose how BitLocker-protected operating system drives can be recovered' is set to 'Enabled'
@@ -300,7 +300,7 @@ registry_key 'HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\FVE' do
      data: 1,
    }]
    action :create
-   only_if { node['cis']['level']['bitlocker']  == "true" }
+   only_if { node['cis']['level']['bitlocker']  == 'true' }
 end
 
 # Ensure 'Choose how BitLocker-protected operating system drives can be recovered: Allow data recovery agent' is set to 'Enabled: False'
@@ -312,7 +312,7 @@ registry_key 'HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\FVE' do
      data: 1,
    }]
    action :create
-   only_if { node['cis']['level']['bitlocker']  == "true" }
+   only_if { node['cis']['level']['bitlocker']  == 'true' }
 end
 
 # Ensure 'Choose how BitLocker-protected operating system drives can be recovered: Recovery Password' is set to 'Enabled: Require 48-digit recovery password'
@@ -324,7 +324,7 @@ registry_key 'HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\FVE' do
      data: 1,
    }]
    action :create
-   only_if { node['cis']['level']['bitlocker']  == "true" }
+   only_if { node['cis']['level']['bitlocker']  == 'true' }
 end
 
 # Ensure 'Choose how BitLocker-protected operating system drives can be recovered: Recovery Key' is set to 'Enabled: Do not allow 256-bit recovery key'
@@ -336,7 +336,7 @@ registry_key 'HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\FVE' do
      data: 1,
    }]
    action :create
-   only_if { node['cis']['level']['bitlocker']  == "true" }
+   only_if { node['cis']['level']['bitlocker']  == 'true' }
 end
 
 # Ensure 'Choose how BitLocker-protected operating system drives can be recovered: Omit recovery options from the BitLocker setup wizard' is set to 'Enabled: True'
@@ -348,7 +348,7 @@ registry_key 'HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\FVE' do
      data: 1,
    }]
    action :create
-   only_if { node['cis']['level']['bitlocker']  == "true" }
+   only_if { node['cis']['level']['bitlocker']  == 'true' }
 end
 
 # Ensure 'Choose how BitLocker-protected operating system drives can be recovered: Save BitLocker recovery information to AD DS for operating system drives' is set to 'Enabled: True'
@@ -360,7 +360,7 @@ registry_key 'HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\FVE' do
      data: 1,
    }]
    action :create
-   only_if { node['cis']['level']['bitlocker']  == "true" }
+   only_if { node['cis']['level']['bitlocker']  == 'true' }
 end
 
 # Ensure 'Choose how BitLocker-protected operating system drives can be recovered: Configure storage of BitLocker recovery information to AD DS:' is set to 'Enabled: Store recovery passwords and key packages'
@@ -372,7 +372,7 @@ registry_key 'HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\FVE' do
      data: 1,
    }]
    action :create
-   only_if { node['cis']['level']['bitlocker']  == "true" }
+   only_if { node['cis']['level']['bitlocker']  == 'true' }
 end
 
 # Ensure 'Choose how BitLocker-protected operating system drives can be recovered: Do not enable BitLocker until recovery information is stored to AD DS for operating system drives' is set to 'Enabled: True'
@@ -384,7 +384,7 @@ registry_key 'HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\FVE' do
      data: 1,
    }]
    action :create
-   only_if { node['cis']['level']['bitlocker']  == "true" }
+   only_if { node['cis']['level']['bitlocker']  == 'true' }
 end
 
 # Ensure 'Configure minimum PIN length for startup' is set to 'Enabled: 7 or more characters'
@@ -396,7 +396,7 @@ registry_key 'HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\FVE' do
      data: 1,
    }]
    action :create
-   only_if { node['cis']['level']['bitlocker']  == "true" }
+   only_if { node['cis']['level']['bitlocker']  == 'true' }
 end
 
 # Ensure 'Configure use of hardware-based encryption for operating system drives' is set to 'Enabled'
@@ -408,7 +408,7 @@ registry_key 'HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\FVE' do
      data: 1,
    }]
    action :create
-   only_if { node['cis']['level']['bitlocker']  == "true" }
+   only_if { node['cis']['level']['bitlocker']  == 'true' }
 end
 
 # Ensure 'Configure use of hardware-based encryption for operating system drives: Use BitLocker software-based encryption when hardware encryption is not available' is set to 'Enabled: True'
@@ -420,7 +420,7 @@ registry_key 'HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\FVE' do
      data: 1,
    }]
    action :create
-   only_if { node['cis']['level']['bitlocker']  == "true" }
+   only_if { node['cis']['level']['bitlocker']  == 'true' }
 end
 
 # Ensure 'Configure use of hardware-based encryption for operating system drives: Restrict encryption algorithms and cipher suites allowed for hardware-based encryption' is set to 'Enabled: False'
@@ -432,7 +432,7 @@ registry_key 'HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\FVE' do
      data: 1,
    }]
    action :create
-   only_if { node['cis']['level']['bitlocker']  == "true" }
+   only_if { node['cis']['level']['bitlocker']  == 'true' }
 end
 
 # Ensure 'Configure use of hardware-based encryption for operating system drives: Restrict crypto algorithms or cipher suites to the following:' is set to 'Enabled: 2.16.840.1.101.3.4.1.2;2.16.840.1.101.3.4.1.42'
@@ -444,7 +444,7 @@ registry_key 'HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\FVE' do
      data: 1,
    }]
    action :create
-   only_if { node['cis']['level']['bitlocker']  == "true" }
+   only_if { node['cis']['level']['bitlocker']  == 'true' }
 end
 
 # Ensure 'Configure use of passwords for operating system drives' is set to 'Disabled'
@@ -456,7 +456,7 @@ registry_key 'HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\FVE' do
      data: 1,
    }]
    action :create
-   only_if { node['cis']['level']['bitlocker']  == "true" }
+   only_if { node['cis']['level']['bitlocker']  == 'true' }
 end
 
 # Ensure 'Require additional authentication at startup' is set to 'Enabled'
@@ -468,7 +468,7 @@ registry_key 'HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\FVE' do
      data: 1,
    }]
    action :create
-   only_if { node['cis']['level']['bitlocker']  == "true" }
+   only_if { node['cis']['level']['bitlocker']  == 'true' }
 end
 
 # Ensure 'Require additional authentication at startup: Allow BitLocker without a compatible TPM' is set to 'Enabled: False'
@@ -480,7 +480,7 @@ registry_key 'HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\FVE' do
      data: 1,
    }]
    action :create
-   only_if { node['cis']['level']['bitlocker']  == "true" }
+   only_if { node['cis']['level']['bitlocker']  == 'true' }
 end
 
 # Ensure 'Require additional authentication at startup: Configure TPM startup:' is set to 'Enabled: Do not allow TPM'
@@ -492,7 +492,7 @@ registry_key 'HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\FVE' do
      data: 1,
    }]
    action :create
-   only_if { node['cis']['level']['bitlocker']  == "true" }
+   only_if { node['cis']['level']['bitlocker']  == 'true' }
 end
 
 # Ensure 'Require additional authentication at startup: Configure TPM startup PIN:' is set to 'Enabled: Require startup PIN with TPM'
@@ -504,7 +504,7 @@ registry_key 'HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\FVE' do
      data: 1,
    }]
    action :create
-   only_if { node['cis']['level']['bitlocker']  == "true" }
+   only_if { node['cis']['level']['bitlocker']  == 'true' }
 end
 
 # Ensure 'Require additional authentication at startup: Configure TPM startup key:' is set to 'Enabled: Do not allow startup key with TPM'
@@ -526,7 +526,7 @@ registry_key 'HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\FVE' do
      data: 1,
    }]
    action :create
-   only_if { node['cis']['level']['bitlocker']  == "true" }
+   only_if { node['cis']['level']['bitlocker']  == 'true' }
 end
 
 # Ensure 'Allow access to BitLocker-protected removable data drives from earlier versions of Windows' is set to 'Disabled'
@@ -538,7 +538,7 @@ registry_key 'HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\FVE' do
      data: 1,
    }]
    action :create
-   only_if { node['cis']['level']['bitlocker']  == "true" }
+   only_if { node['cis']['level']['bitlocker']  == 'true' }
 end
 
 # Ensure 'Choose how BitLocker-protected removable drives can be recovered' is set to 'Enabled'
@@ -550,7 +550,7 @@ registry_key 'HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\FVE' do
      data: 1,
    }]
    action :create
-   only_if { node['cis']['level']['bitlocker']  == "true" }
+   only_if { node['cis']['level']['bitlocker']  == 'true' }
 end
 
 # Ensure 'Choose how BitLocker-protected removable drives can be recovered: Allow data recovery agent' is set to 'Enabled: True'
@@ -562,7 +562,7 @@ registry_key 'HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\FVE' do
      data: 1,
    }]
    action :create
-   only_if { node['cis']['level']['bitlocker']  == "true" }
+   only_if { node['cis']['level']['bitlocker']  == 'true' }
 end
 
 # Ensure 'Choose how BitLocker-protected removable drives can be recovered: Recovery Password' is set to 'Enabled: Do not allow 48-digit recovery password'
@@ -574,7 +574,7 @@ registry_key 'HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\FVE' do
      data: 1,
    }]
    action :create
-   only_if { node['cis']['level']['bitlocker']  == "true" }
+   only_if { node['cis']['level']['bitlocker']  == 'true' }
 end
 
 # Ensure 'Choose how BitLocker-protected removable drives can be recovered: Recovery Key' is set to 'Enabled: Do not allow 256-bit recovery key'
@@ -586,7 +586,7 @@ registry_key 'HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\FVE' do
      data: 1,
    }]
    action :create
-   only_if { node['cis']['level']['bitlocker']  == "true" }
+   only_if { node['cis']['level']['bitlocker']  == 'true' }
 end
 
 # Ensure 'Choose how BitLocker-protected removable drives can be recovered: Omit recovery options from the BitLocker setup wizard' is set to 'Enabled: True'
@@ -598,7 +598,7 @@ registry_key 'HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\FVE' do
      data: 1,
    }]
    action :create
-   only_if { node['cis']['level']['bitlocker']  == "true" }
+   only_if { node['cis']['level']['bitlocker']  == 'true' }
 end
 
 # Ensure 'Choose how BitLocker-protected removable drives can be recovered: Save BitLocker recovery information to AD DS for removable data drives' is set to 'Enabled: False'
@@ -610,7 +610,7 @@ registry_key 'HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\FVE' do
      data: 1,
    }]
    action :create
-   only_if { node['cis']['level']['bitlocker']  == "true" }
+   only_if { node['cis']['level']['bitlocker']  == 'true' }
 end
 
 # Ensure 'Choose how BitLocker-protected removable drives can be recovered: Configure storage of BitLocker recovery information to AD DS:' is set to 'Enabled: Backup recovery passwords and key packages'
@@ -622,7 +622,7 @@ registry_key 'HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\FVE' do
      data: 1,
    }]
    action :create
-   only_if { node['cis']['level']['bitlocker']  == "true" }
+   only_if { node['cis']['level']['bitlocker']  == 'true' }
 end
 
 # Ensure 'Choose how BitLocker-protected removable drives can be recovered: Do not enable BitLocker until recovery information is stored to AD DS for removable data drives' is set to 'Enabled: False'
@@ -634,7 +634,7 @@ registry_key 'HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\FVE' do
      data: 1,
    }]
    action :create
-   only_if { node['cis']['level']['bitlocker']  == "true" }
+   only_if { node['cis']['level']['bitlocker']  == 'true' }
 end
 
 # Ensure 'Configure use of hardware-based encryption for removable data drives' is set to 'Enabled'
@@ -646,7 +646,7 @@ registry_key 'HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\FVE' do
      data: 1,
    }]
    action :create
-   only_if { node['cis']['level']['bitlocker']  == "true" }
+   only_if { node['cis']['level']['bitlocker']  == 'true' }
 end
 
 # Ensure 'Configure use of hardware-based encryption for removable data drives: Use BitLocker software-based encryption when hardware encryption is not available' is set to 'Enabled: True'
@@ -658,7 +658,7 @@ registry_key 'HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\FVE' do
      data: 1,
    }]
    action :create
-   only_if { node['cis']['level']['bitlocker']  == "true" }
+   only_if { node['cis']['level']['bitlocker']  == 'true' }
 end
 
 # Ensure 'Configure use of hardware-based encryption for removable data drives: Restrict encryption algorithms and cipher suites allowed for hardware-based encryption' is set to 'Enabled: False'
@@ -670,7 +670,7 @@ registry_key 'HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\FVE' do
      data: 1,
    }]
    action :create
-   only_if { node['cis']['level']['bitlocker']  == "true" }
+   only_if { node['cis']['level']['bitlocker']  == 'true' }
 end
 
 # Ensure 'Configure use of hardware-based encryption for removable data drives: Restrict crypto algorithms or cipher suites to the following:' is set to 'Enabled: 2.16.840.1.101.3.4.1.2;2.16.840.1.101.3.4.1.42'
@@ -682,7 +682,7 @@ registry_key 'HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\FVE' do
      data: 1,
    }]
    action :create
-   only_if { node['cis']['level']['bitlocker']  == "true" }
+   only_if { node['cis']['level']['bitlocker']  == 'true' }
 end
 
 # Ensure 'Configure use of passwords for removable data drives' is set to 'Disabled'
@@ -694,7 +694,7 @@ registry_key 'HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\FVE' do
      data: 1,
    }]
    action :create
-   only_if { node['cis']['level']['bitlocker']  == "true" }
+   only_if { node['cis']['level']['bitlocker']  == 'true' }
 end
 
 # Ensure 'Configure use of smart cards on removable data drives' is set to 'Enabled'
@@ -706,7 +706,7 @@ registry_key 'HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\FVE' do
      data: 1,
    }]
    action :create
-   only_if { node['cis']['level']['bitlocker']  == "true" }
+   only_if { node['cis']['level']['bitlocker']  == 'true' }
 end
 
 # Ensure 'Configure use of smart cards on removable data drives: Require use of smart cards on removable data drives' is set to 'Enabled: True'
@@ -718,7 +718,7 @@ registry_key 'HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\FVE' do
      data: 1,
    }]
    action :create
-   only_if { node['cis']['level']['bitlocker']  == "true" }
+   only_if { node['cis']['level']['bitlocker']  == 'true' }
 end
 
 # Ensure 'Deny write access to removable drives not protected by BitLocker' is set to 'Enabled'
@@ -730,7 +730,7 @@ registry_key 'HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Policies\Microsoft\FVE
      data: 1,
    }]
    action :create
-   only_if { node['cis']['level']['bitlocker']  == "true" }
+   only_if { node['cis']['level']['bitlocker']  == 'true' }
 end
 
 # Ensure 'Deny write access to removable drives not protected by BitLocker: Do not allow write access to devices configured in another organization' is set to 'Enabled: False'
@@ -742,7 +742,7 @@ registry_key 'HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\FVE' do
      data: 1,
    }]
    action :create
-   only_if { node['cis']['level']['bitlocker']  == "true" }
+   only_if { node['cis']['level']['bitlocker']  == 'true' }
 end
 
 # Ensure 'Choose drive encryption method and cipher strength (Windows 10 [Version 1511] and later)' is set to 'Enabled: XTSAES 256-bit'
@@ -754,7 +754,7 @@ registry_key 'HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\FVE:EncryptionMetho
      data: 1,
    }]
    action :create
-   only_if { node['cis']['level']['bitlocker']  == "true" }
+   only_if { node['cis']['level']['bitlocker']  == 'true' }
 end
 
 # Ensure 'Disable new DMA devices when this computer is locked' is set to 'Enabled'
@@ -766,7 +766,7 @@ registry_key 'HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\FVE' do
      data: 1,
    }]
    action :create
-   only_if { node['cis']['level']['bitlocker']  == "true" }
+   only_if { node['cis']['level']['bitlocker']  == 'true' }
 end
 
 # Ensure 'Allow Use of Camera' is set to 'Disabled'
@@ -778,7 +778,7 @@ registry_key 'HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Camera' do
      data: 1,
    }]
    action :create
-   only_if { node['cis']['level']['2'] == "true" }
+   only_if { node['cis']['level']['2'] == 'true' }
 end
 
 # Ensure 'Turn off Microsoft consumer experiences' is set to 'Enabled'
@@ -840,7 +840,7 @@ registry_key 'HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\DataCollect
      data: 1,
    }]
    action :create
-   only_if { node['cis']['level']['2'] == "true" }
+   only_if { node['cis']['level']['2'] == 'true' }
 end
 
 # Ensure 'Disable pre-release features or settings' is set to 'Disabled'
@@ -1010,7 +1010,7 @@ registry_key 'HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\HomeGroup\D
    }]
    action :create
    recursive true
-  end
+end
 
 # Ensure 'Turn off Windows Location Provider' is set to 'Enabled'
 # Level 2 Rule
@@ -1021,7 +1021,7 @@ registry_key 'HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\LocationAnd
      data: 1,
    }]
    action :create
-   only_if { node['cis']['level']['2'] == "true" }
+   only_if { node['cis']['level']['2'] == 'true' }
 end
 
 # Ensure 'Block all consumer Microsoft account user authentication' is set to 'Enabled'
@@ -1043,7 +1043,7 @@ registry_key 'HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\MicrosoftEdge\Servi
      data: 1,
    }]
    action :create
-   only_if { node['cis']['level']['2'] == "true" }
+   only_if { node['cis']['level']['2'] == 'true' }
 end
 
 # Ensure 'Allow Adobe Flash' is set to 'Disabled'
@@ -1054,7 +1054,7 @@ registry_key 'HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\MicrosoftEdge\Addon
      data: 1,
    }]
    action :create
-   only_if { node['cis']['level']['2'] == "true" }
+   only_if { node['cis']['level']['2'] == 'true' }
 end
 
 # Ensure 'Allow Extensions' is set to 'Disabled'
@@ -1066,7 +1066,7 @@ registry_key 'HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\MicrosoftEdge\Exten
      data: 1,
    }]
    action :create
-   only_if { node['cis']['level']['2'] == "true" }
+   only_if { node['cis']['level']['2'] == 'true' }
 end
 
 # Ensure 'Allow InPrivate Browsing' is set to 'Disabled'
@@ -1078,7 +1078,7 @@ registry_key 'HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\MicrosoftEdge\Main'
      data: 1,
    }]
    action :create
-   only_if { node['cis']['level']['2'] == "true" }
+   only_if { node['cis']['level']['2'] == 'true' }
 end
 
 # Ensure 'Configure cookies' is set to 'Enabled: Block only 3rd-party cookies' or higher
@@ -1111,7 +1111,7 @@ registry_key 'HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\MicrosoftEdge\Main'
      data: 1,
    }]
    action :create
-   only_if { node['cis']['level']['2'] == "true" }
+   only_if { node['cis']['level']['2'] == 'true' }
 end
 
 # Ensure 'Configure search suggestions in Address bar' is set to 'Disabled'
@@ -1123,7 +1123,7 @@ registry_key 'HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\MicrosoftEdge\Searc
      data: 1,
    }]
    action :create
-   only_if { node['cis']['level']['2'] == "true" }
+   only_if { node['cis']['level']['2'] == 'true' }
 end
 
 # Ensure 'Configure the Adobe Flash Click-to-Run setting' is set to 'Enabled'
@@ -1145,7 +1145,7 @@ registry_key 'HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\MicrosoftEdge\Main'
      data: 1,
    }]
    action :create
-   only_if { node['cis']['level']['2'] == "true" }
+   only_if { node['cis']['level']['2'] == 'true' }
 end
 
 # Ensure 'Prevent using Localhost IP address for WebRTC' is set to 'Enabled'
@@ -1157,7 +1157,7 @@ registry_key 'HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\MicrosoftEdge\Main'
      data: 1,
    }]
    action :create
-   only_if { node['cis']['level']['2'] == "true" }
+   only_if { node['cis']['level']['2'] == 'true' }
 end
 
 # Ensure 'Prevent the usage of OneDrive for file storage' is set to 'Enabled'
@@ -1189,7 +1189,7 @@ registry_key 'HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows NT\Terminal
      data: 1,
    }]
    action :create
-   only_if { node['cis']['level']['2'] == "true" }
+   only_if { node['cis']['level']['2'] == 'true' }
 end
 
 # Ensure 'Do not allow COM port redirection' is set to 'Enabled'
@@ -1201,7 +1201,7 @@ registry_key 'HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows NT\Terminal
      data: 1,
    }]
    action :create
-   only_if { node['cis']['level']['2'] == "true" }
+   only_if { node['cis']['level']['2'] == 'true' }
 end
 
 # Ensure 'Do not allow drive redirection' is set to 'Enabled'
@@ -1223,7 +1223,7 @@ registry_key 'HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows NT\Terminal
      data: 1,
    }]
    action :create
-   only_if { node['cis']['level']['2'] == "true" }
+   only_if { node['cis']['level']['2'] == 'true' }
 end
 
 # Ensure 'Do not allow supported Plug and Play device redirection' is set to 'Enabled'
@@ -1235,7 +1235,7 @@ registry_key 'HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows NT\Terminal
      data: 1,
    }]
    action :create
-   only_if { node['cis']['level']['2'] == "true" }
+   only_if { node['cis']['level']['2'] == 'true' }
 end
 
 # Ensure 'Always prompt for password upon connection' is set to 'Enabled'
@@ -1277,7 +1277,7 @@ registry_key 'HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows NT\Terminal
      data: 1,
    }]
    action :create
-   only_if { node['cis']['level']['2'] == "true" }
+   only_if { node['cis']['level']['2'] == 'true' }
 end
 
 # Ensure 'Set time limit for disconnected sessions' is set to 'Enabled: 1 minute'
@@ -1289,7 +1289,7 @@ registry_key 'HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows NT\Terminal
      data: 1,
    }]
    action :create
-   only_if { node['cis']['level']['2'] == "true" }
+   only_if { node['cis']['level']['2'] == 'true' }
 end
 
 # Ensure 'Do not delete temp folders upon exit' is set to 'Disabled'
@@ -1372,7 +1372,7 @@ registry_key 'HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows NT\CurrentV
      data: 1,
    }]
    action :create
-   only_if { node['cis']['level']['2'] == "true" }
+   only_if { node['cis']['level']['2'] == 'true' }
 end
 
 # Ensure 'Disable all apps from Windows Store' is set to 'Disabled'
@@ -1384,7 +1384,7 @@ registry_key 'HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\WindowsStore' do
      data: 1,
    }]
    action :create
-   only_if { node['cis']['level']['2'] == "true" }
+   only_if { node['cis']['level']['2'] == 'true' }
 end
 
 # Ensure 'Turn off Automatic Download and Install of updates' is set to 'Disabled'
@@ -1416,7 +1416,7 @@ registry_key 'HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\WindowsStore' do
      data: 1,
    }]
    action :create
-   only_if { node['cis']['level']['2'] == "true" }
+   only_if { node['cis']['level']['2'] == 'true' }
 end
 
 # Ensure 'Join Microsoft MAPS' is set to 'Disabled'
@@ -1428,7 +1428,7 @@ registry_key 'HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows Defender\Sp
      data: 1,
    }]
    action :create
-   only_if { node['cis']['level']['2'] == "true" }
+   only_if { node['cis']['level']['2'] == 'true' }
 end
 
 # Ensure 'Configure Watson events' is set to 'Disabled'
@@ -1440,7 +1440,7 @@ registry_key 'HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows Defender\Re
      data: 1,
    }]
    action :create
-   only_if { node['cis']['level']['2'] == "true" }
+   only_if { node['cis']['level']['2'] == 'true' }
 end
 
 # Ensure 'Configure Windows Defender SmartScreen' is set to 'Enabled: Warn'
@@ -1472,7 +1472,7 @@ registry_key 'HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\MicrosoftEdge\Phish
      data: 1,
    }]
    action :create
-   only_if { node['cis']['level']['2'] == "true" }
+   only_if { node['cis']['level']['2'] == 'true' }
 end
 
 # Ensure 'Prevent bypassing Windows Defender SmartScreen prompts for sites' is set to 'Enabled'
@@ -1484,7 +1484,7 @@ registry_key 'HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\MicrosoftEdge\Phish
      data: 1,
    }]
    action :create
-   only_if { node['cis']['level']['2'] == "true" }
+   only_if { node['cis']['level']['2'] == 'true' }
 end
 
 # Ensure 'Enables or disables Windows Game Recording and Broadcasting' is set to 'Disabled'
@@ -1516,7 +1516,7 @@ registry_key 'HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\WindowsInkWorkspace
      data: 1,
    }]
    action :create
-   only_if { node['cis']['level']['2'] == "true" }
+   only_if { node['cis']['level']['2'] == 'true' }
 end
 
 # Ensure 'Allow user control over installs' is set to 'Disabled'
@@ -1548,7 +1548,7 @@ registry_key 'HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\Installer' 
      data: 1,
    }]
    action :create
-   only_if { node['cis']['level']['2'] == "true" }
+   only_if { node['cis']['level']['2'] == 'true' }
 end
 
 # Ensure 'Sign-in last interactive user automatically after a system-initiated restart' is set to 'Disabled'
@@ -1636,7 +1636,7 @@ registry_key 'HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\WinRM\Servi
      data: 1,
    }]
    action :create
-   only_if { node['cis']['level']['2'] == "true" }
+   only_if { node['cis']['level']['2'] == 'true' }
    recursive true
 end
 
@@ -1671,7 +1671,7 @@ registry_key 'HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\WinRM\Servi
      data: 1,
    }]
    action :create
-   only_if { node['cis']['level']['2'] == "true" }
+   only_if { node['cis']['level']['2'] == 'true' }
    recursive true
 end
 
