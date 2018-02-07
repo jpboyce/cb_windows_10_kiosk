@@ -8,5 +8,5 @@ registry_key 'HKEY_USERS\[USER SID]\SOFTWARE\Policies\Microsoft\Assistance\Clien
     data: 1,
   }]
   action :create
-  only_if { node['cis']['level']['2'] }
+  only_if { node['cis']['level']['2'] == "true" }
 end

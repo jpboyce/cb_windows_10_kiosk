@@ -29,7 +29,7 @@ registry_key 'HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\DeviceInsta
      data: 1,
    }]
    action :create
-   only_if { node['cis']['level']['bitlocker'] }
+   only_if { node['cis']['level']['bitlocker'] == "true" }
 end
 
 # Ensure 'Prevent installation of devices that match any of these device IDs: Prevent installation of devices that match any of these device IDs' is set to 'PCI\CC_0C0A'
@@ -41,7 +41,7 @@ registry_key 'HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\DeviceInsta
      data: 1,
    }]
    action :create
-   only_if { node['cis']['level']['bitlocker'] }
+   only_if { node['cis']['level']['bitlocker'] == "true" }
 end
 
 # Ensure 'Prevent installation of devices that match any of these device IDs: Also apply to matching devices that are already installed.' is set to 'True
@@ -53,7 +53,7 @@ registry_key 'HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\DeviceInsta
      data: 1,
    }]
    action :create
-   only_if { node['cis']['level']['bitlocker'] }
+   only_if { node['cis']['level']['bitlocker'] == "true" }
 end
 
 # Ensure 'Prevent installation of devices using drivers that match these device setup classes' is set to 'Enabled'
@@ -65,7 +65,7 @@ registry_key 'HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\DeviceInsta
      data: 1,
    }]
    action :create
-   only_if { node['cis']['level']['bitlocker'] }
+   only_if { node['cis']['level']['bitlocker'] == "true" }
 end
 
 # Ensure 'Prevent installation of devices using drivers that match these device setup classes: Prevent installation of devices using drivers for these device setup' is set to '{d48179be-ec20-11d1-b6b800c04fa372a7}'
@@ -77,7 +77,7 @@ registry_key 'HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\DeviceInsta
      data: 1,
    }]
    action :create
-   only_if { node['cis']['level']['bitlocker'] }
+   only_if { node['cis']['level']['bitlocker'] == "true" }
 end
 
 # Ensure 'Prevent installation of devices using drivers that match these device setup classes: Also apply to matching devices that are already installed.' is set to 'True'
@@ -89,7 +89,7 @@ registry_key 'HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\DeviceInsta
      data: 1,
    }]
    action :create
-   only_if { node['cis']['level']['bitlocker'] }
+   only_if { node['cis']['level']['bitlocker'] == "true" }
 end
 
 # Ensure 'Boot-Start Driver Initialization Policy' is set to 'Enabled: Good, unknown and bad but critical'
@@ -413,7 +413,7 @@ registry_key 'HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Power\PowerSettings
      data: 1,
    }]
    action :create
-   only_if { node['cis']['level']['bitlocker'] }
+   only_if { node['cis']['level']['bitlocker'] == "true" }
 end
 
 # Ensure 'Allow standby states (S1-S3) when sleeping (plugged in)' is set to 'Disabled'
@@ -425,7 +425,7 @@ registry_key 'HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Power\PowerSettings
      data: 1,
    }]
    action :create
-   only_if { node['cis']['level']['bitlocker'] }
+   only_if { node['cis']['level']['bitlocker'] == "true" }
 end
 
 # Ensure 'Require a password when a computer wakes (on battery)' is set to 'Enabled'

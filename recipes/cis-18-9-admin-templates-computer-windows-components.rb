@@ -9,7 +9,7 @@ registry_key 'HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\CurrentVers
      data: 1,
    }]
    action :create
-   only_if { node['cis']['level']['2'] }
+   only_if { node['cis']['level']['2'] == "true" }
 end
 
 # Ensure 'Allow Microsoft accounts to be optional' is set to 'Enabled'
@@ -31,7 +31,7 @@ registry_key 'HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Polic
      data: 1,
    }]
    action :create
-   only_if { node['cis']['level']['2'] }
+   only_if { node['cis']['level']['2'] == "true" }
 end
 
 # Ensure 'Disallow Autoplay for non-volume devices' is set to 'Enabled'
@@ -777,7 +777,7 @@ registry_key 'HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Camera' do
      data: 1,
    }]
    action :create
-   only_if { node['cis']['level']['2'] }
+   only_if { node['cis']['level']['2'] == "true" }
 end
 
 # Ensure 'Turn off Microsoft consumer experiences' is set to 'Enabled'
@@ -839,7 +839,7 @@ registry_key 'HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\DataCollect
      data: 1,
    }]
    action :create
-   only_if { node['cis']['level']['2'] }
+   only_if { node['cis']['level']['2'] == "true" }
 end
 
 # Ensure 'Disable pre-release features or settings' is set to 'Disabled'
@@ -1011,7 +1011,7 @@ registry_key 'HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\LocationAnd
      data: 1,
    }]
    action :create
-   only_if { node['cis']['level']['2'] }
+   only_if { node['cis']['level']['2'] == "true" }
 end
 
 # Ensure 'Block all consumer Microsoft account user authentication' is set to 'Enabled'
@@ -1033,7 +1033,7 @@ registry_key 'HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\MicrosoftEdge\Servi
      data: 1,
    }]
    action :create
-   only_if { node['cis']['level']['2'] }
+   only_if { node['cis']['level']['2'] == "true" }
 end
 
 # Ensure 'Allow Adobe Flash' is set to 'Disabled'
@@ -1055,7 +1055,7 @@ registry_key 'HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\MicrosoftEdge\Exten
      data: 1,
    }]
    action :create
-   only_if { node['cis']['level']['2'] }
+   only_if { node['cis']['level']['2'] == "true" }
 end
 
 # Ensure 'Allow InPrivate Browsing' is set to 'Disabled'
@@ -1067,7 +1067,7 @@ registry_key 'HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\MicrosoftEdge\Main'
      data: 1,
    }]
    action :create
-   only_if { node['cis']['level']['2'] }
+   only_if { node['cis']['level']['2'] == "true" }
 end
 
 # Ensure 'Configure cookies' is set to 'Enabled: Block only 3rd-party cookies' or higher
@@ -1099,7 +1099,7 @@ registry_key 'HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\MicrosoftEdge\Main'
      data: 1,
    }]
    action :create
-   only_if { node['cis']['level']['2'] }
+   only_if { node['cis']['level']['2'] == "true" }
 end
 
 # Ensure 'Configure search suggestions in Address bar' is set to 'Disabled'
@@ -1111,7 +1111,7 @@ registry_key 'HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\MicrosoftEdge\Searc
      data: 1,
    }]
    action :create
-   only_if { node['cis']['level']['2'] }
+   only_if { node['cis']['level']['2'] == "true" }
 end
 
 # Ensure 'Configure the Adobe Flash Click-to-Run setting' is set to 'Enabled'
@@ -1133,7 +1133,7 @@ registry_key 'HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\MicrosoftEdge\Main'
      data: 1,
    }]
    action :create
-   only_if { node['cis']['level']['2'] }
+   only_if { node['cis']['level']['2'] == "true" }
 end
 
 # Ensure 'Prevent using Localhost IP address for WebRTC' is set to 'Enabled'
@@ -1145,7 +1145,7 @@ registry_key 'HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\MicrosoftEdge\Main'
      data: 1,
    }]
    action :create
-   only_if { node['cis']['level']['2'] }
+   only_if { node['cis']['level']['2'] == "true" }
 end
 
 # Ensure 'Prevent the usage of OneDrive for file storage' is set to 'Enabled'
@@ -1177,7 +1177,7 @@ registry_key 'HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows NT\Terminal
      data: 1,
    }]
    action :create
-   only_if { node['cis']['level']['2'] }
+   only_if { node['cis']['level']['2'] == "true" }
 end
 
 # Ensure 'Do not allow COM port redirection' is set to 'Enabled'
@@ -1189,7 +1189,7 @@ registry_key 'HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows NT\Terminal
      data: 1,
    }]
    action :create
-   only_if { node['cis']['level']['2'] }
+   only_if { node['cis']['level']['2'] == "true" }
 end
 
 # Ensure 'Do not allow drive redirection' is set to 'Enabled'
@@ -1211,7 +1211,7 @@ registry_key 'HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows NT\Terminal
      data: 1,
    }]
    action :create
-   only_if { node['cis']['level']['2'] }
+   only_if { node['cis']['level']['2'] == "true" }
 end
 
 # Ensure 'Do not allow supported Plug and Play device redirection' is set to 'Enabled'
@@ -1223,7 +1223,7 @@ registry_key 'HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows NT\Terminal
      data: 1,
    }]
    action :create
-   only_if { node['cis']['level']['2'] }
+   only_if { node['cis']['level']['2'] == "true" }
 end
 
 # Ensure 'Always prompt for password upon connection' is set to 'Enabled'
@@ -1265,7 +1265,7 @@ registry_key 'HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows NT\Terminal
      data: 1,
    }]
    action :create
-   only_if { node['cis']['level']['2'] }
+   only_if { node['cis']['level']['2'] == "true" }
 end
 
 # Ensure 'Set time limit for disconnected sessions' is set to 'Enabled: 1 minute'
@@ -1277,7 +1277,7 @@ registry_key 'HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows NT\Terminal
      data: 1,
    }]
    action :create
-   only_if { node['cis']['level']['2'] }
+   only_if { node['cis']['level']['2'] == "true" }
 end
 
 # Ensure 'Do not delete temp folders upon exit' is set to 'Disabled'
@@ -1359,7 +1359,7 @@ registry_key 'HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows NT\CurrentV
      data: 1,
    }]
    action :create
-   only_if { node['cis']['level']['2'] }
+   only_if { node['cis']['level']['2'] == "true" }
 end
 
 # Ensure 'Disable all apps from Windows Store' is set to 'Disabled'
@@ -1371,7 +1371,7 @@ registry_key 'HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\WindowsStore' do
      data: 1,
    }]
    action :create
-   only_if { node['cis']['level']['2'] }
+   only_if { node['cis']['level']['2'] == "true" }
 end
 
 # Ensure 'Turn off Automatic Download and Install of updates' is set to 'Disabled'
@@ -1403,7 +1403,7 @@ registry_key 'HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\WindowsStore' do
      data: 1,
    }]
    action :create
-   only_if { node['cis']['level']['2'] }
+   only_if { node['cis']['level']['2'] == "true" }
 end
 
 # Ensure 'Join Microsoft MAPS' is set to 'Disabled'
@@ -1415,7 +1415,7 @@ registry_key 'HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows Defender\Sp
      data: 1,
    }]
    action :create
-   only_if { node['cis']['level']['2'] }
+   only_if { node['cis']['level']['2'] == "true" }
 end
 
 # Ensure 'Configure Watson events' is set to 'Disabled'
@@ -1427,7 +1427,7 @@ registry_key 'HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows Defender\Re
      data: 1,
    }]
    action :create
-   only_if { node['cis']['level']['2'] }
+   only_if { node['cis']['level']['2'] == "true" }
 end
 
 # Ensure 'Configure Windows Defender SmartScreen' is set to 'Enabled: Warn'
@@ -1459,7 +1459,7 @@ registry_key 'HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\MicrosoftEdge\Phish
      data: 1,
    }]
    action :create
-   only_if { node['cis']['level']['2'] }
+   only_if { node['cis']['level']['2'] == "true" }
 end
 
 # Ensure 'Prevent bypassing Windows Defender SmartScreen prompts for sites' is set to 'Enabled'
@@ -1471,7 +1471,7 @@ registry_key 'HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\MicrosoftEdge\Phish
      data: 1,
    }]
    action :create
-   only_if { node['cis']['level']['2'] }
+   only_if { node['cis']['level']['2'] == "true" }
 end
 
 # Ensure 'Enables or disables Windows Game Recording and Broadcasting' is set to 'Disabled'
@@ -1503,7 +1503,7 @@ registry_key 'HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\WindowsInkWorkspace
      data: 1,
    }]
    action :create
-   only_if { node['cis']['level']['2'] }
+   only_if { node['cis']['level']['2'] == "true" }
 end
 
 # Ensure 'Allow user control over installs' is set to 'Disabled'
@@ -1535,7 +1535,7 @@ registry_key 'HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\Installer' 
      data: 1,
    }]
    action :create
-   only_if { node['cis']['level']['2'] }
+   only_if { node['cis']['level']['2'] == "true" }
 end
 
 # Ensure 'Sign-in last interactive user automatically after a system-initiated restart' is set to 'Disabled'
@@ -1617,7 +1617,7 @@ registry_key 'HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\WinRM\Servi
      data: 1,
    }]
    action :create
-   only_if { node['cis']['level']['2'] }
+   only_if { node['cis']['level']['2'] == "true" }
 end
 
 # Ensure 'Allow unencrypted traffic' is set to 'Disabled'
@@ -1649,7 +1649,7 @@ registry_key 'HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\WinRM\Servi
      data: 1,
    }]
    action :create
-   only_if { node['cis']['level']['2'] }
+   only_if { node['cis']['level']['2'] == "true" }
 end
 
 # Ensure 'Select when Feature Updates are received' is set to 'Enabled: Current Branch for Business, 180 or more days'

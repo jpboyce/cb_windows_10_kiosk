@@ -48,7 +48,7 @@ registry_key 'HKEY_USERS\[USER SID]\Software\Policies\Microsoft\Windows\CloudCon
     data: 1,
   }]
   action :create
-  only_if { node['cis']['level']['2'] }
+  only_if { node['cis']['level']['2'] = "true" }
 end
 
 # Ensure 'Turn off all Windows spotlight features' is set to 'Enabled'
@@ -59,7 +59,7 @@ registry_key 'HKEY_USERS\[USER SID]\Software\Policies\Microsoft\Windows\CloudCon
     data: 1,
   }]
   action :create
-  only_if { node['cis']['level']['2'] }
+  only_if { node['cis']['level']['2'] = "true" }
 end
 
 # Ensure 'Prevent users from sharing files within their profile.' is set to 'Enabled'
@@ -90,5 +90,5 @@ registry_key 'HKEY_USERS\[USER SID]\SOFTWARE\Policies\Microsoft\WindowsMediaPlay
     data: 1,
   }]
   action :create
-  only_if { node['cis']['level']['2'] }
+  only_if { node['cis']['level']['2'] = "true" }
 end
