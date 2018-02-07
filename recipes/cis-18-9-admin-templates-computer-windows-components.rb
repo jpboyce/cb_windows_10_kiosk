@@ -1009,7 +1009,8 @@ registry_key 'HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\HomeGroup\D
      data: 1,
    }]
    action :create
-end
+   recursive true
+  end
 
 # Ensure 'Turn off Windows Location Provider' is set to 'Enabled'
 # Level 2 Rule
