@@ -1054,6 +1054,7 @@ registry_key 'HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\MicrosoftEdge\Addon
      data: 1,
    }]
    action :create
+   only_if { node['cis']['level']['2'] == "true" }
 end
 
 # Ensure 'Allow Extensions' is set to 'Disabled'
@@ -1088,6 +1089,7 @@ registry_key 'HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\MicrosoftEdge\Main'
      data: 1,
    }]
    action :create
+   recursive true
 end
 
 # Ensure 'Configure Password Manager' is set to 'Disabled'
@@ -1318,6 +1320,7 @@ registry_key 'HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Internet Explorer\F
      data: 1,
    }]
    action :create
+   recursive true
 end
 
 # Ensure 'Allow Cortana' is set to 'Disabled'
@@ -1559,23 +1562,25 @@ registry_key 'HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Polic
 end
 
 # Ensure 'Turn on PowerShell Script Block Logging' is set to 'Disabled'
-registry_key 'HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\PowerShell\ScriptBlock Logging' do
+registry_key 'HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\PowerShell\ScriptBlockLogging' do
    values [{
      name: 'EnableScriptBlockLogging',
      type: :dword,
      data: 1,
    }]
    action :create
+   recursive true
 end
 
 # Ensure 'Turn on PowerShell Transcription' is set to 'Disabled'
-registry_key 'HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\PowerShell\Transcripti on' do
+registry_key 'HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\PowerShell\Transcription' do
    values [{
      name: 'EnableTranscripting',
      type: :dword,
      data: 1,
    }]
    action :create
+   recursive true
 end
 
 # Ensure 'Allow Basic authentication' is set to 'Disabled'
@@ -1586,6 +1591,7 @@ registry_key 'HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\WinRM\Clien
      data: 1,
    }]
    action :create
+   recursive true
 end
 
 # Ensure 'Allow unencrypted traffic' is set to 'Disabled'
@@ -1596,6 +1602,7 @@ registry_key 'HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\WinRM\Clien
      data: 1,
    }]
    action :create
+   recursive true
 end
 
 # Ensure 'Disallow Digest authentication' is set to 'Enabled'
@@ -1606,6 +1613,7 @@ registry_key 'HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\WinRM\Clien
      data: 1,
    }]
    action :create
+   recursive true
 end
 
 # Ensure 'Allow Basic authentication' is set to 'Disabled'
@@ -1616,6 +1624,7 @@ registry_key 'HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\WinRM\Servi
      data: 1,
    }]
    action :create
+   recursive true
 end
 
 # Ensure 'Allow remote server management through WinRM' is set to 'Disabled'
@@ -1628,6 +1637,7 @@ registry_key 'HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\WinRM\Servi
    }]
    action :create
    only_if { node['cis']['level']['2'] == "true" }
+   recursive true
 end
 
 # Ensure 'Allow unencrypted traffic' is set to 'Disabled'
@@ -1638,6 +1648,7 @@ registry_key 'HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\WinRM\Servi
      data: 1,
    }]
    action :create
+   recursive true
 end
 
 # Ensure 'Disallow WinRM from storing RunAs credentials' is set to 'Enabled'
@@ -1648,6 +1659,7 @@ registry_key 'HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\WinRM\Servi
      data: 1,
    }]
    action :create
+   recursive true
 end
 
 # Ensure 'Allow Remote Shell Access' is set to 'Disabled'
@@ -1660,10 +1672,29 @@ registry_key 'HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\WinRM\Servi
    }]
    action :create
    only_if { node['cis']['level']['2'] == "true" }
+   recursive true
 end
 
 # Ensure 'Select when Feature Updates are received' is set to 'Enabled: Current Branch for Business, 180 or more days'
-registry_key 'HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate:DeferFea tureUpdates HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate:DeferFea tureUpdatesPeriodInDays HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate' do
+registry_key 'HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate' do
+   values [{
+     name: 'DeferFeatureUpdates',
+     type: :dword,
+     data: 1,
+   }]
+   action :create
+end
+
+registry_key 'HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate' do
+   values [{
+     name: 'DeferFeatureUpdatesPeriodInDays',
+     type: :dword,
+     data: 1,
+   }]
+   action :create
+end
+
+registry_key 'HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate' do
    values [{
      name: 'BranchReadinessLevel',
      type: :dword,
@@ -1673,7 +1704,16 @@ registry_key 'HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\WindowsUpda
 end
 
 # Ensure 'Select when Quality Updates are received' is set to 'Enabled: 0 days'
-registry_key 'HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate:DeferQua lityUpdates HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate' do
+registry_key 'HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate' do
+   values [{
+     name: 'DeferQualityUpdates',
+     type: :dword,
+     data: 1,
+   }]
+   action :create
+end
+
+registry_key 'HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate' do
    values [{
      name: 'DeferQualityUpdatesPeriodInDays',
      type: :dword,
