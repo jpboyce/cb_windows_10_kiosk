@@ -45,7 +45,7 @@ registry_key 'HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\Explorer' d
 end
 
 # Ensure 'Set the default behavior for AutoRun' is set to 'Enabled: Do not execute any autorun commands'
-registry_key 'HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\Explore r' do
+registry_key 'HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\Explorer' do
    values [{
      name: 'NoAutorun',
      type: :dword,
@@ -55,7 +55,7 @@ registry_key 'HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Polic
 end
 
 # Ensure 'Turn off Autoplay' is set to 'Enabled: All drives'
-registry_key 'HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\Explore r' do
+registry_key 'HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\Explorer' do
    values [{
      name: 'NoDriveTypeAutoRun',
      type: :dword,
@@ -72,6 +72,7 @@ registry_key 'HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Biometrics\FacialFe
      data: 1,
    }]
    action :create
+   recursive true
 end
 
 # Ensure 'Allow access to BitLocker-protected fixed data drives from earlier versions of Windows' is set to 'Disabled'
