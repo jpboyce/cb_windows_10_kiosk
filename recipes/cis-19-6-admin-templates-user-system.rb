@@ -1,7 +1,7 @@
 # Windows 10 CIS Benchmark Items - Section 19.6 - Administrative Templates (User), System
 
 # Ensure 'Turn off Help Experience Improvement Program' is set to 'Enabled'
-registry_key 'HKEY_USERS\[USER SID]\SOFTWARE\Policies\Microsoft\Assistance\Client\1.0' do
+registry_key 'HKEY_USERS\.DEFAULT\SOFTWARE\Policies\Microsoft\Assistance\Client\1.0' do
   values [{
     name: 'NoImplicitFeedback',
     type: :dword,
@@ -9,4 +9,5 @@ registry_key 'HKEY_USERS\[USER SID]\SOFTWARE\Policies\Microsoft\Assistance\Clien
   }]
   action :create
   only_if { node['cis']['level']['2'] == "true" }
+  recursive true
 end
