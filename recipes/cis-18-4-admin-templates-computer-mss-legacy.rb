@@ -1,6 +1,5 @@
 # Windows 10 CIS Benchmark Items - Section 18.4 - Administrative Templates (Computer), MSS (Legacy)
 
-
 # Ensure 'MSS: (AutoAdminLogon) Enable Automatic Logon (not recommended)' is set to 'Disabled'
 registry_key "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Winlogon" do
   values [{
