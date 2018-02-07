@@ -992,7 +992,7 @@ registry_key 'HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\Explorer' d
 end
 
 # Ensure 'Turn off shell protocol protected mode' is set to 'Disabled'
-registry_key 'HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\Explore r' do
+registry_key 'HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\Explorer' do
    values [{
      name: 'PreXPSP2ShellProtocolBehavior',
      type: :dword,
@@ -1002,7 +1002,7 @@ registry_key 'HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Polic
 end
 
 # Ensure 'Prevent the computer from joining a homegroup' is set to 'Enabled'
-registry_key 'HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\HomeGroup\DisableHomeG roup' do
+registry_key 'HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\HomeGroup\DisableHomeGroup' do
    values [{
      name: '',
      type: :dword,
