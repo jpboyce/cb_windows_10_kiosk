@@ -19,4 +19,4 @@ issues_url 'https://github.com/jpboyce/cb-windows-10-kiosk/issues'
 #
 source_url 'https://github.com/jpboyce/cb-windows-10-kiosk'
 supports 'windows'
-depends 'windows', '>= 3.0'
+depends 'windows', '>= 3.0', 'windows-security-policy'
