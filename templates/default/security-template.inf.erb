@@ -7,9 +7,14 @@ Revision=1
 
 [System Access]
 <% node['security_policy']['password_policy'].each do |setting, value| %>
-    <% unless value.nil? -%>
+  <% unless value.nil? -%>
 <%= setting %> = <%= value %>
-    <% end %>
+  <% end %>
+<% end %>
+<% node['security_policy']['account_lockout_policy'].each do |setting, value| %>
+  <% unless value.nil? -%>
+<%= setting %> = <%= value %>
+  <% end %>
 <% end %>
 
 [Privilege Rights]
