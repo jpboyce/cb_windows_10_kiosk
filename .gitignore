@@ -21,3 +21,4 @@ Berksfile.lock
 .zero-knife.rb
 Policyfile.lock.json
 .vscode/settings.json
+.rubocop_todo.yml
