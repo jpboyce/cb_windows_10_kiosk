@@ -10,7 +10,7 @@ default['security_policy']['user_rights']['SeNetworkLogonRight'] = ['*S-1-5-32-5
 default['security_policy']['user_rights']['SeTcbPrivilege'] = []
 
 # 2.2.4 (L1) Ensure 'Adjust memory quotas for a process' is set to 'Administrators, LOCAL SERVICE, NETWORK SERVICE'
-default['security_policy']['user_rights']['SeIncreaseQuotaPrivilege'] = ['*S-1-5-32-544','*S-1-5-19', '*S-1-5-20']
+default['security_policy']['user_rights']['SeIncreaseQuotaPrivilege'] = ['*S-1-5-32-544', '*S-1-5-19', '*S-1-5-20']
 
 # 2.2.5 (L1) Ensure 'Allow log on locally' is set to 'Administrators, Users'
 default['security_policy']['user_rights']['SeInteractiveLogonRight'] = ['*S-1-5-32-544', '*S-1-5-32-545']
@@ -25,7 +25,7 @@ default['security_policy']['user_rights']['SeBackupPrivilege'] = ['*S-1-5-32-544
 default['security_policy']['user_rights']['SeSystemTimePrivilege'] = ['*S-1-5-32-544', '*S-1-5-19']
 
 # 2.2.9 (L1) Ensure 'Change the time zone' is set to 'Administrators, LOCAL SERVICE, Users'
-default['security_policy']['user_rights']['SeTimeZonePrivilege'] = ['*S-1-5-32-544','*S-1-5-19', '*S-1-5-32-545']
+default['security_policy']['user_rights']['SeTimeZonePrivilege'] = ['*S-1-5-32-544', '*S-1-5-19', '*S-1-5-32-545']
 
 # 2.2.10 (L1) Ensure 'Create a pagefile' is set to 'Administrators'
 default['security_policy']['user_rights']['SeCreatePagefilePrivilege'] = ['*S-1-5-32-544']
@@ -34,7 +34,7 @@ default['security_policy']['user_rights']['SeCreatePagefilePrivilege'] = ['*S-1-
 default['security_policy']['user_rights']['SeCreateTokenPrivilege'] = []
 
 # 2.2.12 (L1) Ensure 'Create global objects' is set to 'Administrators, LOCAL SERVICE, NETWORK SERVICE, SERVICE'
-default['security_policy']['user_rights']['SeCreateGlobalPrivilege'] = ['*S-1-5-32-544','*S-1-5-19', '*S-1-5-20', '*S-1-5-6']
+default['security_policy']['user_rights']['SeCreateGlobalPrivilege'] = ['*S-1-5-32-544', '*S-1-5-19', '*S-1-5-20', '*S-1-5-6']
 
 # 2.2.13 (L1) Ensure 'Create permanent shared objects' is set to 'No One'
 default['security_policy']['user_rights']['SeCreatePermanentPrivilege'] = []
@@ -70,7 +70,7 @@ default['security_policy']['user_rights']['SeRemoteShutdownPrivilege'] = ['*S-1-
 default['security_policy']['user_rights']['SeAuditPrivilege'] = ['*S-1-5-19', '*S-1-5-20']
 
 # 2.2.24 (L1) Ensure 'Impersonate a client after authentication' is set to 'Administrators, LOCAL SERVICE, NETWORK SERVICE, SERVICE'
-default['security_policy']['user_rights']['SeImpersonatePrivilege'] = ['*S-1-5-32-544','*S-1-5-19', '*S-1-5-20', '*S-1-5-6']
+default['security_policy']['user_rights']['SeImpersonatePrivilege'] = ['*S-1-5-32-544', '*S-1-5-19', '*S-1-5-20', '*S-1-5-6']
 
 # 2.2.25 (L1) Ensure 'Increase scheduling priority' is set to 'Administrators'
 default['security_policy']['user_rights']['SeIncreaseBasePriorityPrivilege'] = ['*S-1-5-32-544']
