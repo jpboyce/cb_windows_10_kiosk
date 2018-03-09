@@ -8,7 +8,7 @@ registry_key 'HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Polic
    values [{
      name: 'NoConnectedUser',
      type: :dword,
-     data: 1,
+     data: 3,
    }]
    action :create
 end
@@ -21,7 +21,7 @@ registry_key 'HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Lsa' do
    values [{
      name: 'LimitBlankPasswordUse',
      type: :dword,
-     data: 1,
+     data: 0,
    }]
    action :create
 end
@@ -47,7 +47,7 @@ registry_key 'HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Lsa' do
    values [{
      name: 'CrashOnAuditFail',
      type: :dword,
-     data: 1,
+     data: 0,
    }]
    action :create
 end
@@ -58,7 +58,7 @@ registry_key 'HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Wi
    values [{
      name: 'AllocateDASD',
      type: :dword,
-     data: 1,
+     data: 0,
    }]
    action :create
 end
@@ -75,7 +75,7 @@ registry_key 'HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Print\Provider
 end
 
 # 2.3.6.1 (L1) Ensure 'Domain member: Digitally encrypt or sign secure channel data (always)' is set to 'Enabled'
-# HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Netlogon\Parameters:Requ ireSignOrSeal
+# HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Netlogon\Parameters:RequireSignOrSeal
 registry_key 'HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Netlogon\Parameters' do
    values [{
      name: 'RequireSignOrSeal',
@@ -113,12 +113,20 @@ registry_key 'HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Netlogon\Para
    values [{
      name: 'DisablePasswordChange',
      type: :dword,
-     data: 1,
+     data: 0,
    }]
    action :create
 end
 
 # 2.3.6.5 (L1) Ensure 'Domain member: Maximum machine account password age' is set to '30 or fewer days, but not 0'
+registry_key 'HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Netlogon\Parameters' do
+   values [{
+     name: 'MaximumPasswordAge',
+     type: :dword,
+     data: 30,
+   }]
+   action :create
+end
 
 # 2.3.6.6 (L1) Ensure 'Domain member: Require strong (Windows 2000 or later) session key' is set to 'Enabled'
 # HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Netlogon\Parameters:Requ ireStrongKey
@@ -148,7 +156,7 @@ registry_key 'HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Polic
    values [{
      name: 'DisableCAD',
      type: :dword,
-     data: 1,
+     data: 0,
    }]
    action :create
 end
@@ -159,7 +167,7 @@ registry_key 'HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Polic
    values [{
      name: 'MaxDevicePasswordFailedAttempts',
      type: :dword,
-     data: 1,
+     data: 10,
    }]
    action :create
 end
@@ -170,7 +178,7 @@ registry_key 'HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Polic
    values [{
      name: 'InactivityTimeoutSecs',
      type: :dword,
-     data: 1,
+     data: 900,
    }]
    action :create
 end
@@ -180,8 +188,8 @@ end
 registry_key 'HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System' do
    values [{
      name: 'LegalNoticeText',
-     type: :dword,
-     data: 1,
+     type: :string,
+     data: 'This is a scary legal notice',
    }]
    action :create
 end
@@ -191,8 +199,8 @@ end
 registry_key 'HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System' do
    values [{
      name: 'LegalNoticeCaption',
-     type: :dword,
-     data: 1,
+     type: :string,
+     data: 'Tihis is the heading for the scary notice',
    }]
    action :create
 end
@@ -202,8 +210,8 @@ end
 registry_key 'HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlogon' do
    values [{
      name: 'CachedLogonsCount',
-     type: :dword,
-     data: 1,
+     type: :string,
+     data: 4,
    }]
    action :create
 end
@@ -214,7 +222,7 @@ registry_key 'HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Wi
    values [{
      name: 'PasswordExpiryWarning',
      type: :dword,
-     data: 1,
+     data: 10,
    }]
    action :create
 end
@@ -224,7 +232,7 @@ end
 registry_key 'HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlogon' do
    values [{
      name: 'ScRemoveOption',
-     type: :dword,
+     type: :string,
      data: 1,
    }]
    action :create
@@ -258,7 +266,7 @@ registry_key 'HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\LanmanWorksta
    values [{
      name: 'EnablePlainTextPassword',
      type: :dword,
-     data: 1,
+     data: 0,
    }]
    action :create
 end
@@ -269,7 +277,7 @@ registry_key 'HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\LanManServer\
    values [{
      name: 'AutoDisconnect',
      type: :dword,
-     data: 1,
+     data: 15,
    }]
    action :create
 end
@@ -359,7 +367,7 @@ registry_key 'HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Lsa' do
    values [{
      name: 'EveryoneIncludesAnonymous',
      type: :dword,
-     data: 1,
+     data: 0,
    }]
    action :create
 end
@@ -369,30 +377,41 @@ end
 registry_key 'HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\LanManServer\Parameters' do
    values [{
      name: 'NullSessionPipes',
-     type: :dword,
-     data: 1,
+     type: :multi_string,
+     data: [],
    }]
    action :create
 end
 
 # 2.3.10.7 (L1) Ensure 'Network access: Remotely accessible registry paths'
-# HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurePipeServers\Winreg\ AllowedExactPaths:Machine
+# HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurePipeServers\Winreg\AllowedExactPaths:Machine
 registry_key 'HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurePipeServers\Winreg\AllowedExactPaths' do
    values [{
      name: 'Machine',
-     type: :dword,
-     data: 1,
+     type: :multi_string,
+     data: ['System\CurrentControlSet\Control\ProductOptions',
+     'System\CurrentControlSet\Control\Server Applications',
+     'Software\Microsoft\Windows NT\CurrentVersion'],
    }]
    action :create
 end
 
 # 2.3.10.8 (L1) Ensure 'Network access: Remotely accessible registry paths and sub-paths'
-# HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurePipeServers\Winreg\ AllowedPaths:Machine
+# HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurePipeServers\Winreg\AllowedPaths:Machine
 registry_key 'HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurePipeServers\Winreg\AllowedPaths' do
    values [{
      name: 'Machine',
-     type: :dword,
-     data: 1,
+     type: :multi_string,
+     data: ['System\CurrentControlSet\Control\Print\Printers',
+'System\CurrentControlSet\Services\Eventlog',
+'Software\Microsoft\OLAP Server',
+'Software\Microsoft\Windows NT\CurrentVersion\Print',
+'Software\Microsoft\Windows NT\CurrentVersion\Windows',
+'System\CurrentControlSet\Control\ContentIndex',
+'System\CurrentControlSet\Control\Terminal Server',
+'System\CurrentControlSet\Control\Terminal Server\UserConfig',
+'System\CurrentControlSet\Control\Terminal Server\DefaultUserConfiguration',
+'Software\Microsoft\Windows NT\CurrentVersion\Perflib System\CurrentControlSet\Services\SysmonLog'],
    }]
    action :create
 end
@@ -413,8 +432,8 @@ end
 registry_key 'HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Lsa' do
    values [{
      name: 'restrictremotesam',
-     type: :dword,
-     data: 1,
+     type: :string,
+     data: '(O:SYG:SYD:(A;;RC;;;BA)',
    }]
    action :create
 end
@@ -424,8 +443,8 @@ end
 registry_key 'HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\LanManServer\Parameters' do
    values [{
      name: 'NullSessionShares',
-     type: :dword,
-     data: 1,
+     type: :multi_string,
+     data: [],
    }]
    action :create
 end
@@ -436,7 +455,7 @@ registry_key 'HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Lsa' do
    values [{
      name: 'ForceGuest',
      type: :dword,
-     data: 1,
+     data: 0,
    }]
    action :create
 end
@@ -458,7 +477,7 @@ registry_key 'HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Lsa\MSV1_0' do
    values [{
      name: 'AllowNullSessionFallback',
      type: :dword,
-     data: 1,
+     data: 0,
    }]
    action :create
 end
@@ -469,7 +488,7 @@ registry_key 'HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Lsa\pku2u' do
    values [{
      name: 'AllowOnlineID',
      type: :dword,
-     data: 1,
+     data: 0,
    }]
    action :create
 end
@@ -504,7 +523,7 @@ registry_key 'HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Lsa' do
    values [{
      name: 'LmCompatibilityLevel',
      type: :dword,
-     data: 1,
+     data: 5,
    }]
    action :create
 end
@@ -526,7 +545,7 @@ registry_key 'HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Lsa\MSV1_0' do
    values [{
      name: 'NTLMMinClientSec',
      type: :dword,
-     data: 1,
+     data: 537395200,
    }]
    action :create
 end
@@ -537,7 +556,7 @@ registry_key 'HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Lsa\MSV1_0' do
    values [{
      name: 'NTLMMinServerSec',
      type: :dword,
-     data: 1,
+     data: 537395200,
    }]
    action :create
 end
@@ -548,7 +567,7 @@ registry_key 'HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Cryptography' do
    values [{
      name: 'ForceKeyProtection',
      type: :dword,
-     data: 1,
+     data: 2,
    }]
    action :create
 end
@@ -592,7 +611,7 @@ registry_key 'HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Polic
    values [{
      name: 'EnableUIADesktopToggle',
      type: :dword,
-     data: 1,
+     data: 0,
    }]
    action :create
 end
@@ -603,7 +622,7 @@ registry_key 'HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Polic
    values [{
      name: 'ConsentPromptBehaviorAdmin',
      type: :dword,
-     data: 1,
+     data: 2,
    }]
    action :create
 end
@@ -614,7 +633,7 @@ registry_key 'HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Polic
    values [{
      name: 'ConsentPromptBehaviorUser',
      type: :dword,
-     data: 1,
+     data: 0,
    }]
    action :create
 end
