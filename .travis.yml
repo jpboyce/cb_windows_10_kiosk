@@ -3,3 +3,5 @@ branches:
   only:
     - master
 script: bundle exec rake build
+env:
+  - CHEF_VERSION=13.4.19
