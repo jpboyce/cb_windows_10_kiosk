@@ -10,10 +10,8 @@ end
 =end
 
 # 17.3.2 (L1) Ensure 'Audit Process Creation' is set to 'Success'
-=begin
 # AuditPol execute block
 execute 'name' do
-  command 'auditpol /set /subcategory:{GUID}|SubCatName /success:enable|disable /failure:enable|disable'
+  command 'auditpol /set /subcategory:Process Creation /success:enable /failure:disable'
   action :run
 end
-=end
