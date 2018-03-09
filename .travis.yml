@@ -1,9 +1,15 @@
 language: ruby
+
+addons:
+  apt:
+    sources:
+      - chef-stable-trusty
+    packages:
+      - chefdk
+
 branches:
   only:
     - master
-script:
-  - bundle update
-  - bundle exec rake build
+
 env:
   - CHEF_VERSION=13.4.19
