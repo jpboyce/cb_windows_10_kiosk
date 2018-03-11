@@ -14,23 +14,23 @@ include_recipe 'cb-windows-10-kiosk::cis-17-3-audit-policy-logon-logoff'
 include_recipe 'cb-windows-10-kiosk::cis-17-6-audit-policy-object-access'
 include_recipe 'cb-windows-10-kiosk::cis-17-7-audit-policy-policy-change'
 include_recipe 'cb-windows-10-kiosk::cis-17-9-audit-policy-system'
-include_recipe 'cb-windows-10-kiosk::cis-18-1-admin-templates-computer-control-panel'           # 1st pass
-include_recipe 'cb-windows-10-kiosk::cis-18-2-admin-templates-computer-laps'                    # 1st pass
-include_recipe 'cb-windows-10-kiosk::cis-18-3-admin-templates-computer-ms-security-guide'       # 1st pass
-include_recipe 'cb-windows-10-kiosk::cis-18-4-admin-templates-computer-mss-legacy'              # 1st pass
-include_recipe 'cb-windows-10-kiosk::cis-18-5-admin-templates-computer-network'                 # 1st pass
-include_recipe 'cb-windows-10-kiosk::cis-18-8-admin-templates-computer-system'                  # 1st pass
-include_recipe 'cb-windows-10-kiosk::cis-18-9-admin-templates-computer-windows-components'      # 1st pass
+include_recipe 'cb-windows-10-kiosk::cis-18-1-admin-templates-computer-control-panel'
+include_recipe 'cb-windows-10-kiosk::cis-18-2-admin-templates-computer-laps'
+include_recipe 'cb-windows-10-kiosk::cis-18-3-admin-templates-computer-ms-security-guide'
+include_recipe 'cb-windows-10-kiosk::cis-18-4-admin-templates-computer-mss-legacy'
+include_recipe 'cb-windows-10-kiosk::cis-18-5-admin-templates-computer-network'
+include_recipe 'cb-windows-10-kiosk::cis-18-8-admin-templates-computer-system'
+include_recipe 'cb-windows-10-kiosk::cis-18-9-admin-templates-computer-windows-components'
 include_recipe 'cb-windows-10-kiosk::cis-19-1-admin-templates-user-control-panel'
 include_recipe 'cb-windows-10-kiosk::cis-19-5-admin-templates-user-startmenu-taskbar'
 include_recipe 'cb-windows-10-kiosk::cis-19-6-admin-templates-user-system'
 include_recipe 'cb-windows-10-kiosk::cis-19-7-admin-templates-user-windows-components'
 include_recipe 'cb-windows-10-kiosk::cis-2-2-user-rights-assignment'
 include_recipe 'cb-windows-10-kiosk::cis-2-3-security-options'
-include_recipe 'cb-windows-10-kiosk::cis-5-system-services'                                         # Done
-include_recipe 'cb-windows-10-kiosk::cis-9-1-windows-firewall-domain-profile'                      # Done
-include_recipe 'cb-windows-10-kiosk::cis-9-2-windows-firewall-private-profile'                     # Done
-include_recipe 'cb-windows-10-kiosk::cis-9-3-windows-firewall-public-profile'                      # Done
+include_recipe 'cb-windows-10-kiosk::cis-5-system-services'
+include_recipe 'cb-windows-10-kiosk::cis-9-1-windows-firewall-domain-profile'
+include_recipe 'cb-windows-10-kiosk::cis-9-2-windows-firewall-private-profile'
+include_recipe 'cb-windows-10-kiosk::cis-9-3-windows-firewall-public-profile'
 
 # Account Management
-include_recipe 'cb-windows-10-kiosk::local-accounts'                                               # Done
+include_recipe 'cb-windows-10-kiosk::local-accounts'

@@ -359,7 +359,6 @@ registry_key 'HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\WindowsUpda
   recursive true
 end
 
-
 # ScheduleRestartWarning
 # 2, 4, 8, 12, 24 hours
 registry_key 'HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate' do
