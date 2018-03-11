@@ -1,7 +1,7 @@
 # Password Policy settings
 
 # 1.1.1 (L1) Ensure 'Enforce password history' is set to '24 or more password(s)'
-default['security_policy']['password_policy']['PasswordHistorySize'] = nil
+default['security_policy']['password_policy']['PasswordHistorySize'] = 24
 
 # 1.1.2 (L1) Ensure 'Maximum password age' is set to '60 or fewer days, but not 0'
 default['security_policy']['password_policy']['MaximumPasswordAge'] = 60
