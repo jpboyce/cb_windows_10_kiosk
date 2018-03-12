@@ -17,14 +17,14 @@ end
 # 17.5.3 (L1) Ensure 'Audit Logoff' is set to 'Success'
 # AuditPol execute block
 execute 'name' do
-  command 'auditpol /set /subcategory:"Logoff" /success:enable|disable /failure:enable|disable'
+  command 'auditpol /set /subcategory:"Logoff" /success:enable /failure:disable'
   action :run
 end
 
 # 17.5.4 (L1) Ensure 'Audit Logon' is set to 'Success and Failure'
 # AuditPol execute block
 execute 'name' do
-  command 'auditpol /set /subcategory:"Logon" /success:enable|disable /failure:enable|disable'
+  command 'auditpol /set /subcategory:"Logon" /success:enable /failure:enable'
   action :run
 end
 
