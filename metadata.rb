@@ -3,7 +3,7 @@ maintainer 'Jesse Boyce'
 maintainer_email 'jesse@jpboyce.org'
 license 'MIT'
 description 'Installs/Configures cb-windows-10-kiosk'
-long_description 'Installs/Configures cb-windows-10-kiosk'
+long_description IO.read(File.join(File.dirname(__FILE__), 'README.md'))
 version '0.1.0'
 chef_version '>= 12.1' if respond_to?(:chef_version)
 
