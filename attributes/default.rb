@@ -35,7 +35,6 @@ default['power_setting']['active_plan']['ie_javascript_timer'] = '1'
 # Sleep after 0 minutes (never)
 default['power_setting']['active_plan']['standby_timeout'] = '0'
 # Allow hybrid sleep
-
 # Hibernate after 0 minutes (never)
 default['power_setting']['active_plan']['hibernate_timeout'] = '0'
 # USB selective suspend setting, 0 to disable
