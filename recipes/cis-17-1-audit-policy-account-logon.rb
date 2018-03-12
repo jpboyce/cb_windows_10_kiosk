@@ -3,6 +3,6 @@
 # 17.1.1 (L1) Ensure 'Audit Credential Validation' is set to 'Success and Failure'
 # AuditPol execute block
 execute 'name' do
-  command 'auditpol /set /subcategory:Credential Validation /success:enable /failure:enable'
+  command 'auditpol /set /subcategory:"Credential Validation" /success:enable /failure:enable'
   action :run
 end
