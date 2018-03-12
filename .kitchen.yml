@@ -24,7 +24,7 @@ password: vagrant
 suites:
   - name: default
     run_list:
-      - recipe[cb-windows-10-kiosk::default]
+      - recipe[cb_windows_10_kiosk::default]
     verifier:
       inspec_tests:
         - test/smoke/default
