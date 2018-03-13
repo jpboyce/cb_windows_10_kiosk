@@ -34,7 +34,13 @@
 # include_recipe 'cb_windows_10_kiosk::cis-9-3-windows-firewall-public-profile'
 
 # Account Management
-# include_recipe 'cb_windows_10_kiosk::local-accounts'
+include_recipe 'cb_windows_10_kiosk::local-accounts'
 
 # Power Management
-include_recipe 'cb_windows_10_kiosk::custom-power-settings'
+#include_recipe 'cb_windows_10_kiosk::custom-power-settings'
+
+# Kiosk Mode
+include_recipe 'cb_windows_10_kiosk::kiosk-mode'
+Chef::Log.warn("Platform is: #{node['platform']}")
+Chef::Log.warn("Platform Family is: #{node['platform_family']}")
+Chef::Log.warn("Platform version is: #{node['platform_version']}")
