@@ -22,4 +22,3 @@ execute 'hibernate-timeout-ac' do
   command "powercfg /X hibernate-timeout-ac #{node['power_settings']['active_plan']['hibernate_timeout']}"
   action :run
 end
-
