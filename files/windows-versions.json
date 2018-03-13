@@ -1,0 +1,28 @@
+{
+  "windows-versions": [{
+      "version-number": "10.0.16299",
+      "version-name": "1709",
+      "version-codename": "Fall Creators Update"
+    },
+    {
+      "version-number": "10.0.15063",
+      "version-name": "1703",
+      "version-codename": "Creators Update"
+    },
+    {
+      "version-number": "10.0.14393",
+      "version-name": "1607",
+      "version-codename": "Anniversary Update"
+    },
+    {
+      "version-number": "10.0.10586",
+      "version-name": "1511",
+      "version-codename": "November Update"
+    },
+    {
+      "version-number": "10.0.10240",
+      "version-name": "1507 (RTM)",
+      "version-codename": "Release"
+    }
+  ]
+}
