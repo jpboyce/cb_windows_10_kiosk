@@ -1,5 +1,11 @@
 # Kiosk Mode items
 
+# Copy Kiosk mode shell command file
+cookbook_file 'c:\kiosk-shell.bat' do
+    source 'kiosk-shell.bat'
+
+end
+
 # Turn on Shell Launcher Feature
 windows_feature "Client-EmbeddedShellLauncher" do
   action :install
@@ -57,11 +63,11 @@ if (-not($result))
 }
 
 $COMPUTER = "localhost"
-$NAMESPACE = "root\standardcimv2\embedded"
+$NAMESPACE = "root\\standardcimv2\\embedded"
 
 # Create a handle to the class instance so we can call the static methods.
 try {
-    $ShellLauncherClass = [wmiclass]"\\$COMPUTER\${NAMESPACE}:WESL_UserSetting"
+    $ShellLauncherClass = [wmiclass]"\\\\$COMPUTER\\${NAMESPACE}:WESL_UserSetting"
     } catch [Exception] {
     write-host $_.Exception.Message;
     write-host "Make sure Shell Launcher feature is enabled"
@@ -87,7 +93,7 @@ $restart_device = 1
 $shutdown_device = 2
 
 # Set Internet Explorer as the shell for "Kiosk", and restart the machine if Internet Explorer is closed.
-$ShellLauncherClass.SetCustomShell($Kiosk_SID, "c:\program files\internet explorer\iexplore.exe www.microsoft.com", ($null), ($null), $restart_shell)
+$ShellLauncherClass.SetCustomShell($Kiosk_SID, "c:\\kiosk-shell.bat", ($null), ($null), $restart_device)
 
 # Set Explorer as the shell for administrators.
 $ShellLauncherClass.SetCustomShell($Admins_SID, "explorer.exe")
@@ -103,5 +109,3 @@ windows_feature "Client-KeyboardFilter" do
   action :install
   all true
 end
-
-# Disable task manager
