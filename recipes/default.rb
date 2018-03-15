@@ -4,6 +4,23 @@
 #
 # Copyright:: 2018, The Authors, All Rights Reserved.
 
+Chef::Log.warn("Confirming platform details...")
+
+# Chef::Log.warn("Platform Family is: #{node['platform_family']}")
+# Chef::Log.warn("Platform is: #{node['platform']}")
+# Chef::Log.warn("Platform version is: #{node['platform_version']}")
+# if ::Windows::VersionHelper.workstation_version? node
+#  Chef::Log.warn("This is a workstation version of Windows")
+# end
+# if ::Windows::VersionHelper.nt_version(node) == 10.0
+#  Chef::Log.warn("This node is running Windows 10, continuing processing...")
+# else
+#  Chef::Log.warn("This node is not running WIndows 10!")
+# end
+# Chef::Log.warn("Windows version is #{::Windows::VersionHelper.nt_version node}")
+# 15063
+if node['platform_version'] == '10.0.14393'
+  Chef::Log.warn("This node is running Anniversary Update (1607), able to proceed")
 # Include CIS Recipes
 # include_recipe 'cb_windows_10_kiosk::cis-1-1-password-policy'
 # include_recipe 'cb_windows_10_kiosk::cis-1-2-account-lockout-policy'
@@ -41,6 +58,7 @@ include_recipe 'cb_windows_10_kiosk::local-accounts'
 
 # Kiosk Mode
 include_recipe 'cb_windows_10_kiosk::kiosk-mode'
-Chef::Log.warn("Platform is: #{node['platform']}")
-Chef::Log.warn("Platform Family is: #{node['platform_family']}")
-Chef::Log.warn("Platform version is: #{node['platform_version']}")
+
+else
+  Chef::Log.error("This node is not running the correct OS version!")
+end
