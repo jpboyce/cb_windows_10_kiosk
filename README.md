@@ -18,15 +18,18 @@ Requirements
 ------------
 
 ### Platform:
+
 * Windows 10 (preferably 1607 as the CIS 1607-specific benchmark settings are used)
 
 ### Cookbooks:
+
 * windows (~> 4.0)
 * windows-security-policy
 * windows_firewall (~> 3.0)
 
 License and Author
 ------------------
+
 Author:: Jesse Boyce (<jesse@jpboyce.org>)
 Copyright:: 2018, Jesse Boyce
 License:: MIT
