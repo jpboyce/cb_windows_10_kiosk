@@ -6,7 +6,7 @@
 # xend
 
 # if CIS Level 1 is set to yes, then we apply the items
-if node['cis']['level']['1'] == 'yes'
+if node['cb_windows_10_kiosk']['cis_level']['1'] == 'yes'
   # apply level 1 items
   node['cis-5']['level1']['services'].each do |i|
     next unless ::Win32::Service.exists?
@@ -33,7 +33,7 @@ if node['cis']['level']['1'] == 'yes'
 end
 
 # if CIS Level 2 is set to yes, then we apply the items
-if node['cis']['level']['2'] == 'yes'
+if node['cb_windows_10_kiosk']['cis_level']['2'] == 'yes'
   # apply level 2 items
   node['cis-5']['level1']['services'].each do |i|
     next unless ::Win32::Service.exists?

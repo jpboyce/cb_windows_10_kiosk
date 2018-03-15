@@ -1,4 +1,4 @@
-# Windows 10 CIS Benchmark Items - Section 19.7 - Administrative Templates (User), Windows Components
+# Windows 10 CIS Benchmark Items - Section 19.7 - Administrative Templates (User), Windows Componentsx
 
 # Ensure 'Do not preserve zone information in file attachments' is set to 'Disabled'
 registry_key 'HKEY_USERS\.DEFAULT\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\Attachments' do
@@ -53,7 +53,7 @@ registry_key 'HKEY_USERS\.DEFAULT\Software\Policies\Microsoft\Windows\CloudConte
   }]
   action :create
   recursive true
-  only_if { node['cis']['level']['2'] == 'true' }
+  only_if { node['cb_windows_10_kiosk']['cis_level']['2'] == 'true' }
 end
 
 # Ensure 'Turn off all Windows spotlight features' is set to 'Enabled'
@@ -64,7 +64,7 @@ registry_key 'HKEY_USERS\.DEFAULT\Software\Policies\Microsoft\Windows\CloudConte
     data: 1,
   }]
   action :create
-  only_if { node['cis']['level']['2'] == 'true' }
+  only_if { node['cb_windows_10_kiosk']['cis_level']['2'] == 'true' }
   recursive true
 end
 
@@ -98,6 +98,6 @@ registry_key 'HKEY_USERS\.DEFAULT\SOFTWARE\Policies\Microsoft\WindowsMediaPlayer
     data: 1,
   }]
   action :create
-  only_if { node['cis']['level']['2'] == 'true' }
+  only_if { node['cb_windows_10_kiosk']['cis_level']['2'] == 'true' }
   recursive true
 end
