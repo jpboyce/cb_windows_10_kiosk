@@ -29,7 +29,8 @@ Requirements
 
 License and Author
 ------------------
-
 Author:: Jesse Boyce (<jesse@jpboyce.org>)
+
 Copyright:: 2018, Jesse Boyce
+
 License:: MIT
