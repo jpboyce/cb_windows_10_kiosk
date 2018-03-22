@@ -23,9 +23,9 @@ Requirements
 
 ### Cookbooks:
 
-* windows (~> 4.0)
-* windows-security-policy
-* windows_firewall (~> 3.0)
+* windows (>= 4.0)
+* windows-security-policy (>= 0.3.7)
+* windows_firewall (>= 3.0)
 
 License and Author
 ------------------
