@@ -1,13 +1,13 @@
 # User Rights Assignment
 
 # 2.2.1 (L1) Ensure 'Access Credential Manager as a trusted caller' is set to 'No One'
-# default['security_policy']['rights']['SeTrustedCredManAccessPrivilege'] = []
+default['security_policy']['rights']['SeTrustedCredManAccessPrivilege'] = ''
 
 # 2.2.2 (L1) Ensure 'Access this computer from the network' is set to 'Administrators, Remote Desktop Users'
 default['security_policy']['rights']['SeNetworkLogonRight'] = '*S-1-5-32-544,*S-1-5-32-555'
 
 # 2.2.3 (L1) Ensure 'Act as part of the operating system' is set to 'No One'
-# default['security_policy']['rights']['SeTcbPrivilege'] = nil
+default['security_policy']['rights']['SeTcbPrivilege'] = ''
 
 # 2.2.4 (L1) Ensure 'Adjust memory quotas for a process' is set to 'Administrators, LOCAL SERVICE, NETWORK SERVICE'
 default['security_policy']['rights']['SeIncreaseQuotaPrivilege'] = '*S-1-5-32-544,*S-1-5-19,*S-1-5-20'
@@ -31,13 +31,13 @@ default['security_policy']['rights']['SeTimeZonePrivilege'] = '*S-1-5-32-544,*S-
 default['security_policy']['rights']['SeCreatePagefilePrivilege'] = '*S-1-5-32-544'
 
 # 2.2.11 (L1) Ensure 'Create a token object' is set to 'No One'
-# default['security_policy']['rights']['SeCreateTokenPrivilege'] = []
+default['security_policy']['rights']['SeCreateTokenPrivilege'] = ''
 
 # 2.2.12 (L1) Ensure 'Create global objects' is set to 'Administrators, LOCAL SERVICE, NETWORK SERVICE, SERVICE'
 default['security_policy']['rights']['SeCreateGlobalPrivilege'] = '*S-1-5-32-544,*S-1-5-19,*S-1-5-20,*S-1-5-6'
 
 # 2.2.13 (L1) Ensure 'Create permanent shared objects' is set to 'No One'
-# default['security_policy']['rights']['SeCreatePermanentPrivilege'] = []
+default['security_policy']['rights']['SeCreatePermanentPrivilege'] = ''
 
 # 2.2.14 (L1) Configure 'Create symbolic links'
 default['security_policy']['rights']['SeCreateSymbolicLinkPrivilege'] = '*S-1-5-32-544'
@@ -46,7 +46,9 @@ default['security_policy']['rights']['SeCreateSymbolicLinkPrivilege'] = '*S-1-5-
 default['security_policy']['rights']['SeDebugPrivilege'] = '*S-1-5-32-544'
 
 # 2.2.16 (L1) Ensure 'Deny access to this computer from the network' to include 'Guests, Local account'
-default['security_policy']['rights']['SeDenyNetworkLogonRight'] = '*S-1-5-32-546,*S-1-5-113'
+# default['security_policy']['rights']['SeDenyNetworkLogonRight'] = '*S-1-5-32-546,*S-1-5-113'
+# Editing this from the default value to allow chef to work by removing local accounts
+default['security_policy']['rights']['SeDenyNetworkLogonRight'] = '*S-1-5-32-546'
 
 # 2.2.17 (L1) Ensure 'Deny log on as a batch job' to include 'Guests'
 default['security_policy']['rights']['SeDenyBatchLogonRight'] = '*S-1-5-32-546'
@@ -61,7 +63,7 @@ default['security_policy']['rights']['SeDenyInteractiveLogonRight'] = '*S-1-5-32
 default['security_policy']['rights']['SeDenyRemoteInteractiveLogonRight'] = '*S-1-5-32-546,*S-1-5-113'
 
 # 2.2.21 (L1) Ensure 'Enable computer and user accounts to be trusted for delegation' is set to 'No One'
-# default['security_policy']['rights']['SeEnableDelegationPrivilege'] = []
+default['security_policy']['rights']['SeEnableDelegationPrivilege'] = ''
 
 # 2.2.22 (L1) Ensure 'Force shutdown from a remote system' is set to 'Administrators'
 default['security_policy']['rights']['SeRemoteShutdownPrivilege'] = '*S-1-5-32-544'
@@ -79,19 +81,19 @@ default['security_policy']['rights']['SeIncreaseBasePriorityPrivilege'] = '*S-1-
 default['security_policy']['rights']['SeLoadDriverPrivilege'] = '*S-1-5-32-544'
 
 # 2.2.27 (L1) Ensure 'Lock pages in memory' is set to 'No One'
-# default['security_policy']['rights']['SeLockMemoryPrivilege'] = []
+default['security_policy']['rights']['SeLockMemoryPrivilege'] = ''
 
 # 2.2.28 (L2) Ensure 'Log on as a batch job' is set to 'Administrators'
 default['security_policy']['rights']['SeBatchLogonRight'] = '*S-1-5-32-544'
 
 # 2.2.29 (L2) Ensure 'Log on as a service' is set to 'No One'
-# default['security_policy']['rights']['SeServiceLogonRight'] = []
+default['security_policy']['rights']['SeServiceLogonRight'] = ''
 
 # 2.2.30 (L1) Ensure 'Manage auditing and security log' is set to 'Administrators'
 default['security_policy']['rights']['SeSecurityPrivilege'] = '*S-1-5-32-544'
 
 # 2.2.31 (L1) Ensure 'Modify an object label' is set to 'No One'
-# default['security_policy']['rights']['SeRelabelPrivilege'] = []
+default['security_policy']['rights']['SeRelabelPrivilege'] = ''
 
 # 2.2.32 (L1) Ensure 'Modify firmware environment values' is set to 'Administrators'
 default['security_policy']['rights']['SeSystemEnvironmentPrivilege'] = '*S-1-5-32-544'
