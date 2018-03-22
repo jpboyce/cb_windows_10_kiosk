@@ -72,7 +72,7 @@ default['security_policy']['rights']['SeRemoteShutdownPrivilege'] = '*S-1-5-32-5
 default['security_policy']['rights']['SeAuditPrivilege'] = '*S-1-5-19,*S-1-5-20'
 
 # 2.2.24 (L1) Ensure 'Impersonate a client after authentication' is set to 'Administrators, LOCAL SERVICE, NETWORK SERVICE, SERVICE'
-default['security_policy']['rights']['SeImpersonatePrivilege'] = '*S-1-5-32-544,*S-1-5-19,*S-1-5-20,*S-1-5-6'
+# default['security_policy']['rights']['SeImpersonatePrivilege'] = '*S-1-5-32-544,*S-1-5-19,*S-1-5-20,*S-1-5-6'
 
 # 2.2.25 (L1) Ensure 'Increase scheduling priority' is set to 'Administrators'
 default['security_policy']['rights']['SeIncreaseBasePriorityPrivilege'] = '*S-1-5-32-544'
