@@ -1,3 +1,4 @@
+; Start of file
 [Unicode]
 Unicode=yes
 
@@ -6,20 +7,22 @@ signature="$CHICAGO$"
 Revision=1
 
 [System Access]
-<% node['security_policy']['password_policy'].each do |setting, value| %>
+<% node['cb_windows_10_kiosk']['password_policy'].each do |setting, value| %>
   <% unless value.nil? -%>
 <%= setting %> = <%= value %>
   <% end %>
 <% end %>
-<% node['security_policy']['account_lockout_policy'].each do |setting, value| %>
+<% node['cb_windows_10_kiosk']['account_lockout_policy'].each do |setting, value| %>
   <% unless value.nil? -%>
 <%= setting %> = <%= value %>
   <% end %>
 <% end %>
 
 [Privilege Rights]
-<% node['security_policy']['rights'].each do |setting, value| %>
+<% node['cb_windows_10_kiosk']['user_rights'].each do |setting, value| %>
     <% unless value.nil? -%>
 <%= setting %> = <%= value %>
     <% end %>
 <% end %>
+
+; End of file
