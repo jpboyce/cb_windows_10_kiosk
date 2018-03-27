@@ -3,6 +3,7 @@
 # Enforce password history is set to '24 or more password(s)'
 security_policy 'Enforce password history' do
   policy_template "#{node['cb_windows_10_kiosk']['secedit_template']['location']}\\Enforce_password_history.inf"
+  log_location "#{node['cb_windows_10_kiosk']['secedit_template']['location']}\\Enforce_password_history.log"
   database "#{node['cb_windows_10_kiosk']['secedit_database']['location']}\\#{node['cb_windows_10_kiosk']['secedit_database']['name']}"
   action :configure
 end
