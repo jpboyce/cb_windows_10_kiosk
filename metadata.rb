@@ -4,7 +4,7 @@ maintainer_email 'jesse@jpboyce.org'
 license 'MIT'
 description 'Installs/Configures cb_windows_10_kiosk'
 long_description IO.read(File.join(File.dirname(__FILE__), 'README.md'))
-version '0.1.0'
+version '0.2.0'
 chef_version '>= 12.1' if respond_to?(:chef_version)
 
 # The `issues_url` points to the location where issues for this cookbook are
