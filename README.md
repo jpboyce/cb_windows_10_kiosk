@@ -1,4 +1,4 @@
-cb_windows_10_kiosk Cookbook
+Windows 10 Kiosk Cookbook
 ============================
 
 This cookbook configures a Windows 10 system to act as a secure Kiosk device.  Key features include:
