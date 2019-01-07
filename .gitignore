@@ -22,3 +22,4 @@ Berksfile.lock
 Policyfile.lock.json
 .vscode/settings.json
 .rubocop_todo.yml
+.vscode/*
